@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Галерея</title>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="index.html" class="page-header__logo">
+      <img class="page-header__logo-image" src="img/logotyle-mobile.svg" alt="City of Sedona" width="102" height="83">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toogle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a>Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="main-gallery">
+      <div class="main-gallery__wrapper">
+        <h1 class="main-gallery__title">Фото и видео</h1>
+        <p class="main-gallery__description"> Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+        </p>
+        <div class="main-gallery__list photo-list">
+          <figure class="photo-list__item">
+            <a href="#" class="photo-list__link">
+              <img src="https://via.placeholder.com/150x150" alt="Неродные просторы">
+            </a>
+            <figcaption class="photo-list__description"><b>Неродные просторы</b> <br> Автор фото: Борис</figcaption>
+            <p class="photo-list__rating">
+              <img src="" alt="Like">
+              1350
+            </p>
+          </figure>
+          <figure class="photo-list__item">
+            <a href="#" class="photo-list__link">
+              <img src="https://via.placeholder.com/150x150" alt="Местная растительность">
+            </a>
+            <figcaption class="photo-list__description"><b>Местная растительность</b> <br> Автор фото: Сергей</figcaption>
+            <p class="photo-list__rating">
+              <img src="" alt="Like">
+              143
+            </p>
+          </figure>
+          <figure class="photo-list__item">
+            <a href="#" class="photo-list__link">
+              <img src="https://via.placeholder.com/150x150" alt="Дорога на север">
+            </a>
+            <figcaption class="photo-list__description"><b>Дорога на север</b> <br> Автор фото: Петр</figcaption>
+            <p class="photo-list__rating">
+              <img src="" alt="Like">
+              96
+            </p>
+          </figure>
+          <figure class="photo-list__item">
+            <a href="#" class="photo-list__link">
+              <img src="https://via.placeholder.com/150x150" alt="Мост дьявола">
+            </a>
+            <figcaption class="photo-list__description"><b>Мост дьявола</b> <br> Автор фото: Антон</figcaption>
+            <p class="photo-list__rating">
+              <img src="" alt="Like">
+              254
+            </p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation">
+      <div class="presentation__wrapper">
+        <h2 class="visually-hidden">Видеопрезентация</h2>
+        <b class="presentation__question">Все еще сомневаетесь?</b>
+        <p class="presentation-description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <figur class="video-player">
+          <img src="" alt="заставка">
+          <div class="player-interface">
+            <div class="player-interface__toogle">
+              <div class="player-interface__bar"></div>
+              <div class="player-interface__scale"></div>
+            </div>
+            <div class="player-interface__controls">
+              <img src="" alt="повтор видео">
+              <img src="" alt="субтитры">
+              <img src="" alt="во весь экран">
+            </div>
+          </div>
+        </figur>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__social social">
+      <b>#visitsedona</b>
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="https://twitter.com/htmlacademy_ru" class="social__link social__link--Twitter">Мы в Твиттере</a>
+        </li>
+        <li class="social__item">
+          <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--Facebook">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a href="https://www.youtube.com/user/htmlacademyru" class="social__link social__link--Youtube">Мы на Ютубе</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+        <img src="htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
