@@ -1,0 +1,13 @@
+.map {
+  position: relative;
+
+  margin-bottom: 40px;
+}
+
+.map__point {
+  position: absolute;
+  top: 161px;
+  left: 146px;
+
+  @include size (27px, 27px);
+}

@@ -1,0 +1,58 @@
+.advantages {
+  margin-bottom: 33px;
+
+  @include text(14px, 21px, center);
+  color: $font-color-dark;
+}
+
+.advantages__header {
+  padding: 0 32px 10px;
+}
+
+.advantages__slogan {
+  @include text (19px, 26px, center);
+}
+
+.advantages__intro {
+  line-height: 26px;
+}
+
+.advantages__list {
+  @include margin (0, 0);
+  @include padding (0, 0);
+
+  list-style: none;
+}
+
+.advantages__item:nth-child(1) {
+  @include size (100%, 472px);
+  padding: 61px 27px 45px 28px;
+  box-sizing: border-box;
+
+  background-color: $main-color-blue;
+  background-image: url("source/img/main-city-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 211px;
+  background-size: 320px 260px;
+}
+
+.advantages__item:nth-child(2) {
+  @include size (100%, 451px);
+  padding: 45px 31px 42px 30px;
+  box-sizing: border-box;
+  background-color: $main-color-blue;
+  background-image: url("source/img/photo-bridge-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 191px;
+  background-size: 320px 260px;
+}
+
+.advantages__item:nth-child(n+3) {
+  @include padding(33px, 41px);
+
+  background-color: $main-color-grey;
+}
+
+.advantages__description b {
+  @include text (18px, 26px, center);
+}

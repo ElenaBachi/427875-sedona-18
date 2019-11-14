@@ -1,0 +1,9 @@
+.copyright {
+  margin: 0 auto;
+}
+
+.copyright__text {
+  margin-right: 11px;
+
+  @include text (14px, 26px, center);
+}
