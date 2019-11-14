@@ -1,0 +1,16 @@
+.search {
+  margin-bottom: 49px;
+}
+
+.search b {
+  @include text (21px, 26px, center);
+}
+
+.search-text {
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  @include text (14px, 24px, center);
+}

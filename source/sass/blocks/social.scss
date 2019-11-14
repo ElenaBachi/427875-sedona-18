@@ -1,0 +1,34 @@
+.social {
+  margin-bottom: 51px;
+}
+
+.social b {
+  @include text(21px, 26px, center);
+}
+
+.social__list {
+  list-style: none;
+}
+
+.social__link {
+  @include size (46px, 48px);
+
+  background-color: $main-color-blue;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:visited {
+    background-color: #5496bd;
+  }
+}
+
+.social__link path {
+  fill: $main-color;
+}
+
+.social__link:visited path {
+  fill: rgba($main-color, 30%);
+}

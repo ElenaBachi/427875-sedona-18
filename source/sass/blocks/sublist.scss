@@ -1,0 +1,53 @@
+.sublist {
+  @include margin (0, 0);
+  @include padding (0, 0);
+  @include text(14px, 21px, left);
+
+  background-color: $main-color;
+
+  list-style: none;
+}
+
+.sublist li {
+  position: relative;
+
+  margin-bottom: 38px;
+}
+
+.sublist__accommodation::before {
+  content: "";
+  background-image: url("source/img/icon-house.svg");
+  background-size: 37px 36px;
+  background-repeat: no-repeat;
+
+  @include size(37px, 36px);
+
+  position: absolute;
+}
+
+.sublist__souvenir::before {
+  content: "";
+
+  background-image: url("source/img/icon-gift.svg");
+  background-size: 32px 38px;
+  background-repeat: no-repeat;
+
+  @include size(32px, 38px);
+
+  position: absolute;
+}
+
+.sublist__food::before {
+  content: "";
+  background-image: url("source/img/icon-burger.svg");
+  background-size: 32px 38px;
+  background-repeat: no-repeat;
+
+  @include size(40px, 35px);
+
+  position: absolute;
+}
+
+.sublist h3 {
+  @include text (18px, 26px, left);
+}
