@@ -9,17 +9,15 @@ body {
   padding: 0;
 
   font-family: $font-family;
-  @include text(18px, 21px, center);
+  @include text (18px, 21px, center);
   color: $font-color-dark;
   text-transform: uppercase;
 
   background-color: $main-color;
-  background-image: url('source/img/text-sedona-index.svg'),
-  url('source/img/bg-back-mobile@1x.jpg');
+  background-image: url("source/img/text-sedona-index.svg"), url("source/img/bg-back-mobile@1x.jpg");
   background-position: 20px 90px, 0 0;
   background-repeat: no-repeat, no-repeat;
   background-size: 281px 214px, 320px 389px;
-
 }
 
 a {

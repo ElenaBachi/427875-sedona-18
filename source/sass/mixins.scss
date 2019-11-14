@@ -5,7 +5,7 @@
 
 @mixin text($text-size, $line-height, $align) {
   font-size: $text-size;
-  line-height:$line-height;
+  line-height: $line-height;
   text-align: $align;
 }
 
