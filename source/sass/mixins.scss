@@ -3,16 +3,16 @@
   height: $height;
 }
 
-@mixin text($text-size, $line-height, $align) {
-  font-size: $text-size;
-  line-height: $line-height;
-  text-align: $align;
-}
-
 @mixin margin($vertical-margin, $horizontal-margin) {
   margin: $vertical-margin $horizontal-margin;
 }
 
 @mixin padding($vertical-padding, $horizontal-padding) {
   padding: $vertical-padding $horizontal-padding;
+}
+
+@mixin text($text-size, $line-height, $align) {
+  font-size: $text-size;
+  line-height: $line-height;
+  text-align: $align;
 }
