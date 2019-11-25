@@ -34,7 +34,7 @@
   box-sizing: border-box;
 
   background-color: $main-color-blue;
-  background-image: url("/img/main-city-mobile@1x.jpg");
+  background-image: url("../img/main-city-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 320px 260px;
@@ -46,7 +46,7 @@
   box-sizing: border-box;
 
   background-color: $main-color-blue;
-  background-image: url("/img/photo-bridge-mobile@1x.jpg");
+  background-image: url("../img/photo-bridge-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 320px 260px;
@@ -101,7 +101,7 @@
 
 .sublist__accommodation::before {
   content: "";
-  background-image: url("/img/icon-house.svg");
+  background-image: url("../img/icon-house.svg");
   background-size: 37px 36px;
   background-repeat: no-repeat;
   width: 37px;
@@ -113,7 +113,7 @@
 
 .sublist__souvenir::before {
   content: "";
-  background-image: url("/img/icon-gift.svg");
+  background-image: url("../img/icon-gift.svg");
   background-size: 32px 38px;
   background-repeat: no-repeat;
   width: 32px;
@@ -125,7 +125,7 @@
 
 .sublist__food::before {
   content: "";
-  background-image: url("/img/icon-burger.svg");
+  background-image: url("../img/icon-burger.svg");
   background-size: 40px 35px;
   background-repeat: no-repeat;
   width: 40px;
@@ -175,7 +175,7 @@
     padding: 47px;
     padding-right: 559px;
 
-    background-image: url("/img/main-city-tablet@1x.jpg");
+    background-image: url("../img/main-city-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 512px 256px;
@@ -186,7 +186,7 @@
     padding: 50px;
     padding-left: 562px;
 
-    background-image: url("/img/photo-bridge-tablet@1x.jpg");
+    background-image: url("../img/photo-bridge-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center left;
     background-size: 512px 256px;
@@ -241,7 +241,7 @@
 
   .sublist__accommodation::before {
     content: "";
-    background-image: url("/img/icon-house.svg");
+    background-image: url("../img/icon-house.svg");
     background-size: 75px 72px;
     background-repeat: no-repeat;
     width: 75px;
@@ -253,7 +253,7 @@
 
   .sublist__souvenir::before {
     content: "";
-    background-image: url("/img/icon-gift.svg");
+    background-image: url("../img/icon-gift.svg");
     background-size: 64px 75px;
     background-repeat: no-repeat;
     width: 64px;
@@ -265,7 +265,7 @@
 
   .sublist__food::before {
     content: "";
-    background-image: url("/img/icon-burger.svg");
+    background-image: url("../img/icon-burger.svg");
     background-size: 77px 68px;
     background-repeat: no-repeat;
     width: 77px;
@@ -300,7 +300,7 @@
     padding: 60px;
     padding-right: 865px;
 
-    background-image: url("/img/main-city-desktop@1x.jpg");
+    background-image: url("../img/main-city-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: 400px 0;
     background-size: 800px 256px;
@@ -310,7 +310,7 @@
     padding: 60px;
     padding-left: 865px;
 
-    background-image: url("/img/photo-bridge-desktop@1x.jpg");
+    background-image: url("../img/photo-bridge-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 800px 256px;
@@ -336,19 +336,19 @@
 
   .sublist__accommodation::before {
     content: "";
-    background-image: url("/img/icon-house.svg");
+    background-image: url("../img/icon-house.svg");
     left: 173px;
   }
 
   .sublist__souvenir::before {
     content: "";
-    background-image: url("/img/icon-gift.svg");
+    background-image: url("../img/icon-gift.svg");
     left: 177px;
   }
 
   .sublist__food::before {
     content: "";
-    background-image: url("/img/icon-burger.svg");
+    background-image: url("../img/icon-burger.svg");
     left: 175px;
   }
 }
