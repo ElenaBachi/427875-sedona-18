@@ -1,5 +1,6 @@
-.search {
-  margin-bottom: 49px;
+.search-wrapper {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .search b {
@@ -7,10 +8,92 @@
 }
 
 .search-text {
-  width: 260px;
-  margin: 0 auto;
-  margin-top: 20px;
+  display: block;
   margin-bottom: 40px;
+  padding-right: 28px;
+  padding-left: 28px;
 
   @include text (14px, 24px, center);
+}
+
+.map {
+  position: relative;
+
+  margin-top: 49px;
+  margin-bottom: 40px;
+
+  background-image: url("source/img/bg-map-mobile@1x.jpg");
+  repeat: no-repeat;
+  width: 320px;
+  height: 350px;
+}
+
+.map__point {
+  position: absolute;
+  top: 161px;
+  left: 146px;
+
+  @include size (27px, 27px);
+}
+
+@media (min-width: 768px) {
+  .search-wrapper {
+    width: 768px;
+  }
+
+  .search b {
+    font-size: 30px;
+  }
+
+  .search-text {
+    margin-top: 30px;
+    margin-bottom: 47px;
+    padding-left: 167px;
+    padding-right: 167px;
+  }
+
+  .map {
+    margin-top: 58px;
+    margin-bottom: 36px;
+
+    background-image: url("source/img/bg-map-tablet@1x.jpg");
+    width: 768px;
+  }
+
+  .map__point {
+    top: 164px;
+    left: 370px;
+  }
+
+  iframe {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-wrapper {
+    width: 1200px;
+  }
+
+  .search-text {
+    margin-bottom: 52px;
+    padding-left: 380px;
+    padding-right: 380px;
+  }
+
+  .map {
+    margin-top: 55px;
+
+    background-image: url("source/img/bg-map-desktop@1x.jpg");
+    width: 1200px;
+  }
+
+  .map__point {
+    top: 162px;
+    left: 586px;
+  }
+
+  iframe {
+    width: 1200px;
+  }
 }

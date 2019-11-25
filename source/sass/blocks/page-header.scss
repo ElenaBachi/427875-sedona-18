@@ -1,3 +1,133 @@
 .page-header {
-  margin-bottom: 432px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  @include size(102px, 83px);
+}
+
+@media (min-width: 768px) {
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 333px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header__logo {
+    left: 505px;
+
+    width: 188px;
+    height: 96px;
+  }
+}
+
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+
+  @include text(18px, 40px, center);
+
+  color: $font-color-light;
+
+  background-color: $main-color;
+}
+
+.main-nav__list {
+  @include list-reset();
+
+  background-color: $main-color-blue;
+}
+
+.main-nav__list a {
+  display: block;
+  height: 55px;
+
+  @include padding(20px 92px);
+  box-sizing: border-box;
+
+  font-weight: bold;
+}
+
+.main-nav__list a:hover,
+.main-nav__list a:focus {
+  background-color: #669ec0;
+}
+
+.main-nav__list a:active {
+  color: rgba(#ffffff, 20%);
+
+  background-color: #5496bd;
+}
+
+.main-nav__item {
+  box-shadow: 0 1px 0 0 rgba(#010101, 20%), inset 0 1px 0 0 rgba(#ffffff, 0.2);
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    position: relative;
+
+    width: 768px;
+    margin-bottom: 50px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 768px;
+
+    background-color: $main-color;
+  }
+
+  .main-nav__item {
+    width: 153px;
+
+    box-shadow: none;
+  }
+
+  .main-nav__item:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .main-nav__item:nth-child(3) {
+    margin-left: auto;
+  }
+
+  .main-nav__list a {
+    padding: 20px 0;
+
+    @include text(14px, 26px, center);
+    color: $font-color-dark;
+  }
+
+  .main-nav__list a:hover,
+  .main-nav__list a:focus {
+    color: $main-color-blue;
+
+    background-color: $main-color;
+  }
+
+  .main-nav__list a:active {
+    color: rgba(#ffffff, 30%);
+
+    background-color: $main-color;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-nav {
+    width: 1200px;
+  }
+
+  .main-nav__list {
+    width: 1200px;
+  }
+
+  .main-nav__item {
+    width: 239px;
+  }
 }

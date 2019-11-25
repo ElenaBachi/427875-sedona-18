@@ -1,11 +1,13 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "blocks/page-header.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/site-list.scss";
+@import "blocks/advantages.scss";
+@import "blocks/search.scss";
+@import "blocks/button.scss";
+@import "blocks/page-footer.scss";
 
 body {
-  max-width: 320px;
+  min-width: 320px;
   margin: 0;
   padding: 0;
 
@@ -17,10 +19,6 @@ body {
   text-transform: uppercase;
 
   background-color: $main-color;
-  background-image: url("source/img/text-sedona-index.svg"), url("source/img/bg-back-mobile@1x.jpg");
-  background-position: 20px 90px, 0 0;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 281px 214px, 320px 389px;
 }
 
 a {
