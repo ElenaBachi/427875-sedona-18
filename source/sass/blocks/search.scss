@@ -7,13 +7,13 @@
   @include text (21px, 26px, center);
 }
 
-.search-text {
+.search__text {
   display: block;
   margin-bottom: 40px;
   padding-right: 28px;
   padding-left: 28px;
 
-  @include text (14px, 24px, center);
+  @include text (14px, 21px, center);
 }
 
 .map {
@@ -22,7 +22,7 @@
   margin-top: 49px;
   margin-bottom: 40px;
 
-  background-image: url("source/img/bg-map-mobile@1x.jpg");
+  background-image: url("/img/bg-map-mobile@1x.jpg");
   repeat: no-repeat;
   width: 320px;
   height: 350px;
@@ -45,18 +45,18 @@
     font-size: 30px;
   }
 
-  .search-text {
+  .search__text {
     margin-top: 30px;
     margin-bottom: 47px;
-    padding-left: 167px;
-    padding-right: 167px;
+    padding-left: 170px;
+    padding-right: 170px;
   }
 
   .map {
     margin-top: 58px;
     margin-bottom: 36px;
 
-    background-image: url("source/img/bg-map-tablet@1x.jpg");
+    background-image: url("/img/bg-map-tablet@1x.jpg");
     width: 768px;
   }
 
@@ -75,7 +75,7 @@
     width: 1200px;
   }
 
-  .search-text {
+  .search__text {
     margin-bottom: 52px;
     padding-left: 380px;
     padding-right: 380px;
@@ -84,7 +84,7 @@
   .map {
     margin-top: 55px;
 
-    background-image: url("source/img/bg-map-desktop@1x.jpg");
+    background-image: url("/img/bg-map-desktop@1x.jpg");
     width: 1200px;
   }
 

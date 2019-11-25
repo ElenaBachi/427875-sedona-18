@@ -12,7 +12,6 @@
   text-transform: uppercase;
 
   background-color: $main-color-blue;
-  border: none;
 }
 
 .button:hover,
@@ -21,7 +20,7 @@
 }
 
 .button:active {
-  color: rgba(#ffffff, 30%);
+  color: rgba(#ffffff, 0.3%);
 
   background-color: #5496bd;
 }

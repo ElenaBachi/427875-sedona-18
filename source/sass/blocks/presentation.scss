@@ -33,7 +33,7 @@
 
   @include size (280px, 45px);
 
-  background-color: rgba(#000000, 60%);
+  background-color: rgba(#000000, 0.6%);
 }
 
 .player-interface__bar {
@@ -57,7 +57,7 @@
 
   @include size (235px, 3px);
 
-  background-color: rgba($main-color, 20%);
+  background-color: rgba($main-color, 0.2%);
 }
 
 .player-interface__controls {
@@ -86,6 +86,28 @@
 .player-interface__controls--fulscreen {
   margin-right: 23px;
 }
+
+.player-interface__controls--replay path,
+.player-interface__controls--subtitles path,
+.player-interface__controls--fulscreen polygon {
+  fill: #5c6870;
+}
+
+.player-interface__controls--replay:hover path,
+.player-interface__controls--subtitles:hover path,
+.player-interface__controls--fulscreen:hover polygon,
+.player-interface__controls--replay:focus path,
+.player-interface__controls--subtitles:focus path,
+.player-interface__controls--fulscreen:focus polygon {
+  fill: #333333;
+}
+
+.player-interface__controls--replay:active path,
+.player-interface__controls--subtitles:active path,
+.player-interface__controls--fulscreen:active polygon {
+  fill: rgba(#333333, 0.3%);
+}
+
 
 @media (min-width: 768px) {
   .presentation__wrapper {
@@ -140,9 +162,25 @@
     background-color: transparent;
   }
 
-  path,
-  polygon {
-    fill: $main-color;
+  .player-interface__controls--replay path,
+  .player-interface__controls--subtitles path,
+  .player-interface__controls--fulscreen polygon {
+    fill: #ffffff;
+  }
+
+  .player-interface__controls--replay:hover path,
+  .player-interface__controls--subtitles:hover path,
+  .player-interface__controls--fulscreen:hover polygon,
+  .player-interface__controls--replay:focus path,
+  .player-interface__controls--subtitles:focus path,
+  .player-interface__controls--fulscreen:focus polygon {
+    fill: rgba(#ffffff, 0.6%);
+  }
+
+  .player-interface__controls--replay:active path,
+  .player-interface__controls--subtitles:active path,
+  .player-interface__controls--fulscreen:active polygon {
+    fill: rgba(#333333, 0.3%);
   }
 }
 
