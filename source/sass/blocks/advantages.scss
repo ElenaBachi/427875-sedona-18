@@ -1,10 +1,10 @@
 .advantages {
   width: 320px;
-  margin: 0 auto;
-  margin-bottom: 33px;
 
   @include text(14px, 21px, center);
   color: $font-color-light;
+
+  background-color: $main-color;
 }
 
 .advantages__header {
@@ -143,7 +143,6 @@
 @media (min-width: 768px) {
   .advantages {
     width: 768px;
-    margin-bottom: 57px;
   }
 
   .advantages__header {

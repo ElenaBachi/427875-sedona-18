@@ -1,6 +1,9 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  width: 320px;
+
+  background-color: $main-color;
 }
 
 .page-header__logo {
@@ -8,6 +11,10 @@
 }
 
 @media (min-width: 768px) {
+  .page-header {
+    width: 768px;
+  }
+
   .page-header__logo {
     position: absolute;
     top: 0;
@@ -16,6 +23,10 @@
 }
 
 @media (min-width: 1200px) {
+  .page-header {
+    width: 1200px;
+  }
+
   .page-header__logo {
     left: 505px;
 
@@ -25,9 +36,6 @@
 }
 
 .main-nav {
-  width: 320px;
-  margin: 0 auto;
-
   @include text(18px, 40px, center);
 
   color: $font-color-light;
