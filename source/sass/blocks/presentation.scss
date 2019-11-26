@@ -1,19 +1,19 @@
 .presentation {
+  width: 320px;
+  padding-bottom: 80px;
+
   background-color: $main-color;
 }
 
-.presentation__wrapper {
-  width: 320px;
-  margin: 0 auto;
-  margin-bottom: 115px;
-}
-
 .presentation__question {
+  display: block;
+  padding-top: 40px;
+
   @include text (18px, 26px, center);
 }
 
 .presentation__description {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   padding-left: 42px;
   padding-right: 42px;
 
@@ -114,10 +114,9 @@
 
 
 @media (min-width: 768px) {
-  .presentation__wrapper {
-    width: 648px;
-
-    margin-bottom: 76px;
+  .presentation {
+    width: 768px;
+    padding-bottom: 40px;
   }
 
   .presentation__question {
@@ -125,7 +124,7 @@
   }
 
   .presentation__description {
-    margin-bottom: 78px;
+    padding-bottom: 78px;
     padding-left: 115px;
     padding-right: 115px;
   }
@@ -135,7 +134,8 @@
   }
 
   .player-interface {
-    position: relative;
+    width: 648px;
+    margin: auto;
   }
 
   .player-interface__toogle {
@@ -189,10 +189,9 @@
 }
 
 @media (min-width: 1200px) {
-  .presentation__wrapper {
-    width: 800px;
-
-    margin-bottom: 85px;
+  .presentation {
+    width: 1200px;
+    padding-bottom: 85px;
   }
 
   .presentation__description {
@@ -202,6 +201,10 @@
 
   .video-player__back {
     @include size (800px, 500px);
+  }
+
+  .player-interface {
+    width: 800px;
   }
 
   .player-interface__toogle {

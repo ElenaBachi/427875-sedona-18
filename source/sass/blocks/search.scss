@@ -1,6 +1,6 @@
-
 .search {
   width: 320px;
+  padding-bottom: 10px;
 
   background-color: $main-color;
 }
@@ -43,6 +43,7 @@
 @media (min-width: 768px) {
   .search {
     width: 768px;
+    padding-bottom: 0;
   }
 
   .search b {

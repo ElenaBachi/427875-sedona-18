@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 41px;
 
   background-color: $main-color;
 }
@@ -20,7 +20,7 @@
   width: 150px;
 
   @include list-reset();
-  margin-top: 41px;
+  margin-top: 31px;
   margin-bottom: 41px;
 }
 
@@ -79,12 +79,13 @@
   fill: rgba(#000000, 0.3%);
 }
 
+
 @media (min-width: 768px) {
   .page-footer {
     flex-direction: row;
     justify-content: space-between;
 
-    padding-top: 36px;
+    padding-top: 0;
   }
 
   .page-footer__social {
