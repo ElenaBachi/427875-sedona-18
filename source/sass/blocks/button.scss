@@ -1,0 +1,38 @@
+.button {
+  display: inline-block;
+
+  @include size(280, 58);
+  @include padding(18px, 47px);
+  box-sizing: border-box;
+
+  @include text(21px, 26px, center);
+  font-weight: bold;
+  color: $font-color-light;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: $main-color-blue;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #669ec0;
+}
+
+.button:active {
+  color: rgba(#ffffff, 0.3%);
+
+  background-color: #5496bd;
+}
+
+.button:disabled {
+  background-color: $main-color-grey;
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 458px;
+
+    @include padding (18px, 136px);
+  }
+}

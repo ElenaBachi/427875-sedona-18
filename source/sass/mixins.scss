@@ -1,0 +1,25 @@
+@mixin size ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin margin($vertical-margin, $horizontal-margin) {
+  margin: $vertical-margin $horizontal-margin;
+}
+
+@mixin padding($vertical-padding, $horizontal-padding) {
+  padding: $vertical-padding $horizontal-padding;
+}
+
+@mixin text($text-size, $line-height, $align) {
+  font-size: $text-size;
+  line-height: $line-height;
+  text-align: $align;
+}
+
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
