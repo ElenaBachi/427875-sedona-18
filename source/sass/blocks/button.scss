@@ -1,7 +1,7 @@
 .button {
   display: inline-block;
 
-  @include size(280, 58);
+  @include size(280px, 58px);
   @include padding(18px, 47px);
   box-sizing: border-box;
 
@@ -12,6 +12,8 @@
   text-transform: uppercase;
 
   background-color: $main-color-blue;
+
+  border: none;
 }
 
 .button:hover,

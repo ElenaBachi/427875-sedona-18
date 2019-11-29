@@ -46,7 +46,7 @@
   left: -20px;
 }
 
-.photo-list__item:nth-child(4)::after {
+.photo-list__item:last-child::after {
   content: "";
 
   @include size (320px, 1px);

@@ -55,6 +55,7 @@
   @include padding(20px, 92px);
   box-sizing: border-box;
 
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -108,7 +109,7 @@
     padding: 20px 0;
 
     @include text(14px, 26px, center);
-    color: $font-color-dark;
+    color: $font-color-black;
   }
 
   .main-nav__list a:hover,

@@ -1,0 +1,233 @@
+.feedback {
+  width: 320px;
+
+  @include text (18px, 26px, center);
+  color: $font-color-black;
+
+  background-color: $main-color;
+}
+
+.feedback__header {
+  padding: 22px;
+  padding-top: 40px;
+}
+
+.feedback__text {
+  font-size: 14px;
+  line-height: 24px;
+  color: $font-color-grey;
+}
+
+.feedback__form {
+  font: inherit;
+  text-align: left;
+}
+
+.feedback__form input {
+  font: inherit;
+  color: $font-color-black;
+  text-transform: none;
+  font-weight: bold;
+}
+
+.feedback__form fieldset {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+
+  border: none;
+}
+
+.feedback__form legend {
+  margin-bottom: 25px;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.feedback__form legend::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 0;
+
+  @include size (320px, 1px);
+
+  background-color: rgba(#000000, 0.1%);
+}
+
+.feedback__form label {
+  position: relative;
+
+  display: block;
+
+  font-size: 14px;
+  line-height: 26px;
+  color: $font-color-grey;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.feedback__form ul {
+  @include list-reset ();
+}
+
+.feedback__form li {
+  margin-bottom: 20px;
+}
+
+.review__username ul,
+.review__contacts ul {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.review__username input,
+.review__contacts input {
+  padding: 20px;
+  padding-right: 0;
+
+  font-size: 18px;
+  line-height: 26px;
+  color: $font-color-black;
+  text-transform: none;
+  font-weight: bold;
+
+  background-color: #f2f2f2;
+
+  border: none;
+}
+
+.review__username li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+}
+
+.review__contacts li {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.review__contacts label {
+  margin-bottom: 15px;
+  margin-left: 22px;
+}
+
+.review__impression legend,
+.review__sights legend {
+  margin-bottom: 35px;
+}
+
+.review__impression ul,
+.review__sights ul {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: $font-color-black;
+  text-transform: none;
+}
+
+.review__impression li,
+.review__sights li {
+  margin-bottom: 45px;
+  padding-left: 100px;
+}
+
+.review__radio + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -75px;
+
+  @include size (46px, 46px);
+
+  background-color: #f2f2f2;
+
+  border: 5px solid #f2f2f2;
+  border-radius: 50%;
+}
+
+.review__radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -57px;
+
+  @include size (16px, 16px);
+
+  background-color: #333333;
+
+  border: 3px solid #333333;
+  border-radius: 50%;
+}
+
+.review__checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -75px;
+
+  @include size (46px, 46px);
+
+  background-color: #f2f2f2;
+
+  border: 5px solid #f2f2f2;
+  border-radius: 8px;
+}
+
+.review__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -58px;
+
+  @include size (24px, 16px);
+
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.review__textarea textarea {
+  display: block;
+  margin: 0 auto;
+  padding-top: 22px;
+  padding-left: 20px;
+  padding-right: 33px;
+  width: 280px;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: bold;
+
+  background-color: #f2f2f2;
+
+  border: none;
+
+  resize: none;
+}
+
+.review__submit {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 45px;
+}
+
+.review__submit button {
+  display: block;
+  margin: 0 auto;
+
+  font-size: 18px;
+  box-sizing: border-box;
+}
