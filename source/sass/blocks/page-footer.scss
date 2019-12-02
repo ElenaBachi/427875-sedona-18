@@ -40,7 +40,7 @@
   background-color: #669ec0;
 }
 
-.social__link:visited {
+.social__link:active {
   background-color: #5496bd;
 }
 
@@ -48,8 +48,8 @@
   fill: #ffffff;
 }
 
-.social__link:visited path {
-  fill: rbga(#ffffff, 30%);
+.social__link:active path {
+  opacity: 0.3;
 }
 
 .copyright {
@@ -76,11 +76,11 @@
 }
 
 .copyright__link:active path {
-  fill: rgba(#000000, 0.3%);
+  opacity: 0.3;
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .page-footer {
     flex-direction: row;
     justify-content: space-between;
@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .page-footer {
     padding-top: 55px;
   }

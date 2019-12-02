@@ -113,7 +113,7 @@
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .presentation {
     width: 768px;
     padding-bottom: 40px;
@@ -188,7 +188,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .presentation {
     width: 1200px;
     padding-bottom: 85px;

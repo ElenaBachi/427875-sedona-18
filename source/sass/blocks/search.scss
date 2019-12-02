@@ -40,7 +40,7 @@
   @include size (27px, 27px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .search {
     width: 768px;
     padding-bottom: 0;
@@ -75,7 +75,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .search {
     width: 1200px;
   }

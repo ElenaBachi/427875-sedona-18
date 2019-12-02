@@ -31,7 +31,7 @@
   background-color: $main-color-grey;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .button {
     width: 458px;
 

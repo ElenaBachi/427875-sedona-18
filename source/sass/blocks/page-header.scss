@@ -10,7 +10,7 @@
   @include size(102px, 83px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .page-header {
     width: 768px;
   }
@@ -22,7 +22,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .page-header {
     width: 1200px;
   }
@@ -36,11 +36,83 @@
 }
 
 .main-nav {
-  @include text(18px, 40px, center);
+  position: relative;
 
+  width: 320px;
+  min-height: 55px;
+
+  @include text(18px, 40px, center);
   color: $font-color-light;
 
   background-color: $main-color;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  width: 55px;
+  height: 55px;
+
+  background-color: $main-color;
+
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  right: 20px;
+
+  width: 23px;
+  height: 3px;
+
+  background-color: $main-color-blue;
+  box-shadow: 0 8px 0 0 $main-color-blue, 0 16px 0 0 $main-color-blue;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+
+  background-color: $main-color-blue;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 27px;
+    right: 20px;
+
+    width: 25px;
+    height: 4px;
+
+    background-color: $main-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -52,9 +124,11 @@
 .main-nav__list a {
   display: block;
 
-  @include padding(20px, 92px);
+  @include padding(18px, 92px);
   box-sizing: border-box;
 
+  font-size: 18px;
+  line-height: normal;
   color: #ffffff;
   font-weight: bold;
 }
@@ -74,7 +148,7 @@
   box-shadow: 0 1px 0 0 rgba(#010101, 0.2%), inset 0 1px 0 0 rgba(#ffffff, 0.2%);
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav {
     position: relative;
 
@@ -138,12 +212,12 @@
     color: $active-link-light;
   }
 
-  .main-nav__toogle {
+  .main-nav__toggle {
     display: none;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .main-nav {
     width: 1200px;
   }
