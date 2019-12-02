@@ -7,6 +7,9 @@
 }
 
 .page-header__logo {
+  position: relative;
+  z-index: 2;
+
   @include size(102px, 83px);
 }
 
@@ -153,7 +156,6 @@
     position: relative;
 
     width: 768px;
-    margin-bottom: 50px;
   }
 
   .main-nav__list {

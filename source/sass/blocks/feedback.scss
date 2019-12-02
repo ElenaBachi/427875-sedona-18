@@ -1,7 +1,9 @@
 .feedback {
+  position: relative;
+
   width: 320px;
 
-  @include text (18px, 26px, center);
+  @include text (16px, 26px, center);
   color: $font-color-black;
 
   background-color: $main-color;
@@ -9,7 +11,13 @@
 
 .feedback__header {
   padding: 22px;
-  padding-top: 40px;
+  padding-top: 0;
+}
+
+.feedback__title {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .feedback__text {
@@ -43,6 +51,7 @@
 .feedback__form legend {
   margin-bottom: 25px;
 
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
 }

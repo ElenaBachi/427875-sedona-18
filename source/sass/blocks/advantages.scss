@@ -12,36 +12,22 @@
 
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 69px;
-  padding-bottom: 47px;
-}
-/*
-.advantages__header::before {
-  content: "";
-  position: absolute;
-  top: -27px;
-  left: 0;
-
-  width: 320px;
-  height: 26px;
-
-  background-image: url("../img/bg-intro-triangle-mobile.svg");
-  background-repeat: no-repeat;
+  padding-bottom: 10px;
+  padding-top: 0;
 }
 
 .advantages__header::after {
   content: "";
   position: absolute;
-  top: 37px;
+  bottom: -37px;
   left: 0;
 
-  width: 320px;
-  height: 37px;
+  @include size (322px, 37px);
 
   background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
   background-size: 320px 37px;
-} */
+}
 
 .advantages__slogan {
   @include text (18px, 26px, center);
@@ -181,6 +167,7 @@
     margin-bottom: 55px;
     padding-left: 139px;
     padding-right: 139px;
+    padding-top: 50px;
   }
 
   .advantages__slogan {

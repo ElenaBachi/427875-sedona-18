@@ -1,4 +1,6 @@
 .main-gallery {
+  position: relative;
+
   width: 320px;
 
   @include text (14px, 24px, center);
@@ -8,10 +10,13 @@
 
 .main-gallery__header {
   margin-bottom: 33px;
-  padding-top: 44px;
 }
 
 .main-gallery__title {
+  display: block;
+  margin: 0;
+  padding: 0;
+
   font-size: 18px;
 }
 
@@ -87,9 +92,10 @@
   }
 
   .main-gallery__header {
-    margin-bottom: 33px;
+    margin-bottom: 75px;
     padding-left: 110px;
     padding-right: 110px;
+    padding-top: 76px;
   }
 
   .main-gallery__title {
@@ -161,6 +167,7 @@
   }
 
   .main-gallery__header {
+    margin-bottom: 113px;
     padding-left: 385px;
     padding-right: 385px;
   }
