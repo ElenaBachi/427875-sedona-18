@@ -63,8 +63,8 @@
           <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
         <form method="get" action="https://echo.htmlacademy.ru" class="feedback__form review">
-          <fieldset class="review__username">
-            <legend>Представьтесь:</legend>
+          <div class="review__username">
+            <p>Представьтесь:</p>
             <ul>
               <li>
                 <label for="user-name">Имя<sup>*</sup>:</label>
@@ -79,22 +79,22 @@
                 <input id="user-patronymic" type="text" name="patronymic" placeholder="Александрович">
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="review__contacts">
-            <legend>Контактная информация:</legend>
-            <ul>
-              <li class="review__phone">
+          </div>
+          <div class="review__contacts contacts">
+            <p>Контактная информация:</p>
+            <ul class="contacts__list">
+              <li>
                 <label for="user-phone">Контактный телефон<sup>*</sup>:</label>
                 <input id="user-phone" type="tel" name="phone" placeholder="Введите телефон">
               </li>
-              <li class="review__email">
+              <li>
                 <label for="user-email">Электронная почта<sup>*</sup>:</label>
                 <input id="user-email" type="email" name="email" placeholder="Введите e-mail">
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="review__impression">
-            <legend>Ваше общее впечатление:</legend>
+          </div>
+          <div class="review__impression">
+            <p>Ваше общее впечатление:</p>
             <ul>
               <li>
                 <input class="visually-hidden review__radio" id="positive-impression" type="radio" name="impression" value="positive" checked>
@@ -109,9 +109,9 @@
                 <label for="no-answer">Затрудняюсь ответить</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="review__sights">
-            <legend>Посещенные достопримечательности:</legend>
+          </div>
+          <div class="review__sights">
+            <p>Посещенные достопримечательности:</p>
             <ul>
               <li>
                 <input class="visually-hidden review__checkbox" id="devil-bridge" type="checkbox" name="bridge" checked>
@@ -130,15 +130,14 @@
                 <label for="red-rocks">Красные скалы</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="review__textarea">
-            <legend>Опишите свои эмоции:</legend>
+          </div>
+          <div class="review__textarea">
+            <p>Опишите свои эмоции:</p>
             <textarea name="user-emotion" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
-          </fieldset>
-          <p class="review__submit">
-            <button class="button" type="submit">Отправить отзыв</button>
-          </p>
+          </div>
+          <button class="button review__submit" type="submit">Отправить отзыв</button>
         </form>
+        <small class="feedback__legend"><sup>*</sup> — обязательные поля</small>
       </section>
     </main>
 
