@@ -2,13 +2,14 @@
   display: inline-block;
 
   @include size(280px, 58px);
-  @include padding(18px, 47px);
+  @include padding(16px, 0);
   box-sizing: border-box;
 
   @include text(21px, 26px, center);
   font-weight: bold;
   color: $font-color-light;
   vertical-align: middle;
+  text-align: center;
   text-transform: uppercase;
 
   background-color: $main-color-blue;
@@ -34,7 +35,5 @@
 @media (min-width: $tablet-width) {
   .button {
     width: 458px;
-
-    @include padding (18px, 136px);
   }
 }

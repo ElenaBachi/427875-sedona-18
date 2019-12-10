@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Оставьте свой отзыв</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="inner-page">
@@ -12,7 +11,7 @@
   <div class="wrapper">
 
     <header class="page-header">
-      <nav class="main-nav main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -83,11 +82,11 @@
           <div class="review__contacts contacts">
             <p>Контактная информация:</p>
             <ul class="contacts__list">
-              <li>
-                <label for="user-phone">Контактный телефон<sup>*</sup>:</label>
+              <li class="contacts__item">
+                <label for="user-phone"><span class="phone-hidden">Контактный</span> телефон<sup>*</sup>:</label>
                 <input id="user-phone" type="tel" name="phone" placeholder="Введите телефон">
               </li>
-              <li>
+              <li class="contacts__item">
                 <label for="user-email">Электронная почта<sup>*</sup>:</label>
                 <input id="user-email" type="email" name="email" placeholder="Введите e-mail">
               </li>

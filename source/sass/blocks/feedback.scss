@@ -10,7 +10,9 @@
 }
 
 .feedback__header {
+  margin: 0;
   padding: 22px;
+  padding-bottom: 17px;
   padding-top: 0;
 }
 
@@ -18,16 +20,24 @@
   display: block;
   margin: 0;
   padding: 0;
+  margin-bottom: 25px;
 }
 
 .feedback__text {
+  display: block;
+  margin: 0;
+  padding: 0;
+
   font-size: 14px;
   line-height: 24px;
   color: $font-color-grey;
 }
 
 .feedback__form {
-  font: inherit;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @include text (16px, 26px, center);
   text-align: left;
 }
 
@@ -38,7 +48,7 @@
 .feedback__form p {
   margin: 0;
   padding: 0;
-  padding-top: 25px;
+  margin-top: 20px;
   margin-bottom: 20px;
 
   font-size: 18px;
@@ -75,24 +85,17 @@
   @include list-reset ();
 }
 
-.feedback__form li {
-  margin-bottom: 20px;
-}
-
 @media (min-width: $tablet-width) {
   .feedback {
     width: 768px;
-
-    margin: 0;
-    padding: 0;
 
     @include text (18px, 26px, center);
   }
 
   .feedback__header {
     padding: 165px;
-    padding-top: 71px;
-    padding-bottom: 84px;
+    padding-bottom: 77px;
+    padding-top: 0;
   }
 
   .feedback__title {
@@ -101,8 +104,8 @@
   }
 
   .feedback__form {
-    margin: 0;
-    padding: 0;
+    margin-left: 60px;
+    margin-right: 60px;
   }
 
   .feedback__form div {
@@ -110,15 +113,10 @@
   }
 
   .feedback__form p {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
 
     font-size: 21px;
-  }
-
-  .feedback__form li:last-child {
-    margin-bottom: 0;
   }
 }
 
@@ -128,37 +126,40 @@
   }
 
   .feedback__header {
-    padding: 280px;
-    padding-top: 108px;
-    padding-bottom: 69px;
+    padding: 380px;
+    padding-bottom: 62px;
+    padding-top: 0;
+  }
+
+  .feedback__form {
+    margin-left: 120px;
+    margin-right: 120px;
   }
 }
 
 .review__username ul,
 .review__contacts ul {
-  width: 280px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .review__username li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 280px;
+  margin-bottom: 20px;
 }
 
 .review__contacts li {
   display: flex;
   flex-direction: column;
-  width: 280px;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 20px;
+
+  margin-bottom: 14px;
 }
 
 .review__username input,
 .review__contacts input {
-  padding: 20px;
+  padding: 16px;
+  padding-left: 22px;
   padding-right: 0;
 
   font-size: 18px;
@@ -181,20 +182,55 @@
 }
 
 .review__contacts label {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   margin-left: 22px;
 }
 
+.contacts__item input {
+  padding-right: 58px;
+
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-color: $main-color-grey;
+}
+
+.contacts__item:first-child input {
+  background-image: url("../img/icon-phone.svg");
+}
+
+.contacts__item:last-child input {
+  background-image: url("../img/icon-mail.svg");
+}
+
 .review__impression p {
-  margin-bottom: 47px;
+  margin-bottom: 39px;
 }
 
 .review__sights p {
+  margin-bottom: 37px;
+}
+
+.review__impression li {
+  margin-bottom: 44px;
+  padding-left: 83px;
+}
+
+.review__impression li:last-child {
+  margin-bottom: 42px;
+}
+
+.review__sights li {
+  margin-bottom: 55px;
+  padding-left: 83px;
+}
+
+.review__sights li:last-child {
   margin-bottom: 40px;
 }
 
-.review__impression ul,
-.review__sights ul {
+.review__impression label,
+.review__sights label {
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -202,17 +238,11 @@
   text-transform: none;
 }
 
-.review__impression li,
-.review__sights li {
-  margin-bottom: 50px;
-  padding-left: 100px;
-}
-
 .review__radio + label::before {
   content: "";
   position: absolute;
   top: -15px;
-  left: -75px;
+  left: -83px;
 
   @include size (46px, 46px);
 
@@ -226,7 +256,7 @@
   content: "";
   position: absolute;
   top: 2px;
-  left: -57px;
+  left: -65px;
 
   @include size (16px, 16px);
 
@@ -240,7 +270,7 @@
   content: "";
   position: absolute;
   top: -15px;
-  left: -75px;
+  left: -83px;
 
   @include size (46px, 46px);
 
@@ -254,7 +284,7 @@
   content: "";
   position: absolute;
   top: 5px;
-  left: -58px;
+  left: -65px;
 
   @include size (24px, 16px);
 
@@ -266,10 +296,10 @@
 .review__textarea textarea {
   display: block;
   margin: 0 auto;
-  padding-top: 22px;
+  padding-top: 18px;
   padding-left: 20px;
   padding-right: 33px;
-  width: 280px;
+  width: 100%;
   box-sizing: border-box;
 
   font-size: 16px;
@@ -298,35 +328,18 @@
 
 @media (min-width: $tablet-width) {
   .review {
-    position: relative;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
-    margin-left: 60px;
-    margin-right: 60px;
   }
 
   .review__username {
-    width: 43%;
+    position: relative;
+
     margin-left: auto;
-    margin-bottom: 75px;
-  }
-
-  .review__username::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    right: 324px;
-
-    width: 1px;
-    height: 333px;
-
-    background-color: rgba(#000000, 0.1%);
-    background-repeat: no-repeat;
+    margin-bottom: 53px;
+    width: 42%;
   }
 
   .review__username p,
@@ -334,55 +347,52 @@
     text-align: left;
   }
 
-  .review__username ul {
-    width: 100%;
-    margin: 0;
-  }
-
-  .review__username li {
-    width: 100%;
-  }
-
-  .review__contacts {
+  .review__username p {
     margin-bottom: 58px;
   }
 
-  .review__contacts p {
-    margin-bottom: 30px;
+  .review__contacts {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: 31px;
   }
 
-  .review__contacts ul {
-    width: 100%;
+  .review__contacts p {
+    margin-bottom: 24px;
   }
 
   .review__contacts li {
-    width: 648px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .review__impression {
-    width: 50%;
     order: -1;
   }
 
   .review__impression p {
-    margin-bottom: 82px;
+    margin-bottom: 75px;
   }
 
-  .review__impression li,
-  .review__sights li {
-    margin-bottom: 60px;
+  .review__impression li {
+    margin-bottom: 53px;
     padding-left: 75px;
   }
 
+  .review__impression li:last-child {
+    margin-bottom: 0;
+  }
+
   .review__sights {
-    margin-bottom: 92px;
+    position: relative;
+
+    margin-bottom: 33px;
   }
 
   .review__sights p {
-    margin-bottom: 50px;
-    padding-left: 180px;
-    padding-right: 180px;
+    margin-bottom: 59px;
+    padding-left: 185px;
+    padding-right: 185px;
   }
 
   .review__sights ul {
@@ -390,21 +400,35 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 450px;
+    width: 71%;
     margin: 0 auto;
+  }
+
+  .review__sights li {
+    margin-bottom: 53px;
+    padding-left: 75px;
+    width: 50%;
+    box-sizing: border-box;
   }
 
   .review__sights li:last-child {
-    border: 1px solid purple;
+    margin-bottom: 53px;
+  }
+
+  .review__textarea {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .review__textarea p {
+    margin-bottom: 57px;
   }
 
   .review__textarea textarea {
-    display: block;
-    margin: 0 auto;
     margin-bottom: 58px;
     padding-right: 0;
-    width: 648px;
-    box-sizing: border-box;
 
     font-size: 18px;
     line-height: 26px;
@@ -421,12 +445,12 @@
 
   .feedback__legend {
     position: absolute;
-    bottom: 80px;
+    bottom: 82px;
     right: 60px;
 
     display: block;
 
-    font-style: 14px;
+    font-size: 14px;
     line-height: 26px;
     color: $font-color-grey;
   }
@@ -436,16 +460,59 @@
 
     font-size: 90%;
   }
+
+  .review__username::before {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    right: 324px;
+
+    width: 1px;
+    height: 292px;
+
+    background-color: rgba(#000000, 0.1%);
+    background-repeat: no-repeat;
+  }
+
+  .review__contacts::before,
+  .review__sights::before,
+  .review__textarea::before {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    left: 0;
+
+    width: 118px;
+    height: 1px;
+
+    background-color: rgba(#000000, 0.1%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+  }
+
+  .review__contacts::after,
+  .review__sights::after,
+  .review__textarea::after {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    right: 0;
+
+    width: 118px;
+    height: 1px;
+
+    background-color: rgba(#000000, 0.1%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .review {
-    margin-left: 120px;
-    margin-right: 120px;
-  }
-
   .review__username {
-    margin-bottom: 80px;
+    margin-bottom: 55px;
   }
 
   .review__username::before {
@@ -454,41 +521,51 @@
     position: absolute;
     top: 0;
     right: 479px;
+  }
 
-    height: 333px;
+  .review__contacts {
+    margin-bottom: 56px;
   }
 
   .review__contacts p {
-    margin-bottom: 87px;
+    margin-bottom: 74px;
   }
 
   .review__contacts ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 960px;
+    width: 100%;
   }
 
   .review__contacts li {
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 0;
     width: 50%;
   }
 
-  .review__contacts input {
-    width: 316px;
+  .review__contacts li:first-child {
+    width: 42%;
+  }
+
+  .phone-hidden {
+    display: none;
   }
 
   .review__contacts label {
     margin: 0;
     padding: 0;
-    margin-right: 16px;
-    width: 33%;
+    margin-right: 15px;
+  }
+
+  .review__contacts input {
+    width: 100%;
   }
 
   .contacts__list li:first-child {
-    width: 45%;
+    width: 42%;
   }
 
   .review__impression p {
@@ -501,21 +578,22 @@
   }
 
   .review__sights {
-    margin-bottom: 76px;
+    margin-bottom: 31px;
   }
 
   .review__sights p {
-    margin-bottom: 65px;
+    margin-bottom: 62px;
     padding-left: 340px;
     padding-right: 340px;
   }
 
   .review__sights ul {
-    width: 960px;
+    width: 100%;
+    margin: 0;
   }
 
-  .review__textarea textarea {
-    width: 960px;
+  .review__sights li {
+    width: 25%;
   }
 
   .review__submit {
@@ -524,7 +602,7 @@
 
   .feedback__legend {
     position: absolute;
-    bottom: 87px;
-    right: 120px;
+    bottom: 90px;
+    right: 121px;
   }
 }
