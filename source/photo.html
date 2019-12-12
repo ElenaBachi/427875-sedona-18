@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <title>Галерея</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="inner-page">
 
   <div class="wrapper">
 
     <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -30,11 +29,36 @@
             </li>
           </ul>
           <a href="index.html" class="page-header__logo">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="City of Sedona" width="102" height="83">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" alt="City of Sedona" width="102px" height="83px">
+            </picture>
           </a>
         </div>
       </nav>
+
+      <section class="promo-sedona">
+        <img src="img/text-sedona.svg" alt="Седона" width="229px" height="39px">
+      </section>
     </header>
+
+    <script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
 
     <main class="page-main">
       <section class="main-gallery">
@@ -46,19 +70,37 @@
         <div class="main-gallery__list photo-list">
           <figure class="photo-list__item">
             <a href="#" class="photo-list__link">
-              <img class="photo-list__image" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@2x.webp 2x, img/photo-sunset-desktop@1x.webp 1x">
+                <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@2x.webp 2x, img/photo-sunset-tablet@1x.webp 1x">
+                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+
+                <source type="image/webp" srcset="img/photo-sunset-mobile@2x.webp 2x, img/photo-sunset-mobile@1x.webp 1x">
+                <img class="photo-list__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы">
+              </picture>
             </a>
             <div class="photo-list__caption">
               <figcaption class="photo-list__description"><b>Неродные просторы</b> <br> Автор фото: Борис</figcaption>
               <p class="photo-list__rating">
                 <img src="img/icon-like.svg" alt="Like" width="23px" height="21px">
-                1350
+                <span>1350</span>
               </p>
             </div>
           </figure>
           <figure class="photo-list__item">
             <a href="#" class="photo-list__link">
-              <img class="photo-list__image" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@2x.webp 2x, img/photo-cactus-desktop@1x.webp 1x">
+                <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@2x.webp 2x, img/photo-cactus-tablet@1x.webp 1x">
+                <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+
+                <source type="image/webp" srcset="img/photo-cactus-mobile@2x.webp 2x, img/photo-cactus-mobile@1x.webp 1x">
+                <img class="photo-list__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность">
+              </picture>
             </a>
             <div class="photo-list__caption">
               <figcaption class="photo-list__description"><b>Местная растительность</b> <br> Автор фото: Сергей</figcaption>
@@ -70,7 +112,16 @@
           </figure>
           <figure class="photo-list__item">
             <a href="#" class="photo-list__link">
-              <img class="photo-list__image" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@2x.webp 2x, img/photo-roads-desktop@1x.webp 1x">
+                <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@2x.webp 2x, img/photo-roads-tablet@1x.webp 1x">
+                <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+
+                <source type="image/webp" srcset="img/photo-roads-mobile@2x.webp 2x, img/photo-roads-mobile@1x.webp 1x">
+                <img class="photo-list__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север">
+              </picture>
             </a>
             <div class="photo-list__caption">
               <figcaption class="photo-list__description"><b>Дорога на север</b> <br> Автор фото: Петр</figcaption>
@@ -82,7 +133,16 @@
           </figure>
           <figure class="photo-list__item">
             <a href="#" class="photo-list__link">
-              <img class="photo-list__image" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@2x.webp 2x, img/photo-bridge-desktop@1x.webp 1x">
+                <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@2x.webp 2x, img/photo-bridge-tablet@1x.webp 1x">
+                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+
+                <source type="image/webp" srcset="img/photo-bridge-mobile@2x.webp 2x, img/photo-bridge-mobile@1x.webp 1x">
+                <img class="photo-list__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2.jpg 2x" alt="Мост дьявола">
+              </picture>
             </a>
             <div class="photo-list__caption">
               <figcaption class="photo-list__description"><b>Мост дьявола</b> <br> Автор фото: Антон</figcaption>
@@ -100,7 +160,11 @@
         <b class="presentation__question">Все еще сомневаетесь?</b>
         <p class="presentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <figur class="video-player">
-          <img class="video-player__back" src="img/video-mobile@1x.jpg" alt="заставка" width="320px" height="201px">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video-player__back" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="заставка" width="320px" height="201px">
+          </picture>
           <div class="player-interface">
             <div class="player-interface__toogle">
               <div class="player-interface__bar"></div>

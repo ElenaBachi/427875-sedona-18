@@ -3,14 +3,18 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 41px;
+  padding-top: 29px;
 
   background-color: $main-color;
 }
 
 .social b {
+  display: block;
+  margin: 0;
+  padding: 0;
+
   @include text (21px, 26px, center);
-  color: $font-color-dark;
+  color: $font-color-black;
 }
 
 .social__list {
@@ -20,8 +24,8 @@
   width: 150px;
 
   @include list-reset();
-  margin-top: 31px;
-  margin-bottom: 41px;
+  margin-top: 39px;
+  margin-bottom: 40px;
 }
 
 .social__link {
@@ -40,7 +44,7 @@
   background-color: #669ec0;
 }
 
-.social__link:visited {
+.social__link:active {
   background-color: #5496bd;
 }
 
@@ -48,8 +52,8 @@
   fill: #ffffff;
 }
 
-.social__link:visited path {
-  fill: rbga(#ffffff, 30%);
+.social__link:active path {
+  opacity: 0.3;
 }
 
 .copyright {
@@ -76,11 +80,11 @@
 }
 
 .copyright__link:active path {
-  fill: rgba(#000000, 0.3%);
+  opacity: 0.3;
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .page-footer {
     flex-direction: row;
     justify-content: space-between;
@@ -107,11 +111,7 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .page-footer {
-    padding-top: 55px;
-  }
-
+@media (min-width: $desktop-width) {
   .page-footer__social {
     width: 555px;
   }

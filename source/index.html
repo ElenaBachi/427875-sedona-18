@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Сервис подбора жилья в Седоне</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,8 +11,8 @@
   <div class="wrapper">
 
     <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
             <a>Главная</a>
@@ -28,11 +27,36 @@
             <a href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="City of Sedona" width="102" height="83">
+        <a href="index.html" class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" alt="City of Sedona" width="102px" height="83px">
+          </picture>
         </a>
       </nav>
+
+      <section class="promo-sedona">
+        <img src="img/text-sedona-index.svg" alt="Седона" width="281px" height="214px">
+      </section>
     </header>
+
+    <script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
 
     <main class="page-main">
 
@@ -46,7 +70,7 @@
         </header>
         <ul class="advantages__list">
           <li class="advantages__item">
-            <p class="advantages__description"><b>Настоящий городок</b><br> — №1 — <br>Седона не аттракцион для туристов, там течет своя жизнь</p>
+            <p class="advantages__description"><b>Настоящий городок</b><span> — №1 — </span>Седона не аттракцион для туристов, там течет своя жизнь</p>
           </li>
           <li class="advantages__item">
             <ul class="advantages__sublist sublist">
@@ -65,16 +89,16 @@
             </ul>
           </li>
           <li class="advantages__item">
-            <p class="advantages__description"><b>Там есть мост дьявола</b><br> -№2- <br>да, по нему можно пройти! Если вы осмелитесь,конечно</p>
+            <p class="advantages__description"><b>Там есть мост дьявола</b><span> -№2- </span>да, по нему можно пройти! Если вы осмелитесь,конечно</p>
           </li>
           <li class="advantages__item">
-            <p class="advantages__description"><b>Небольшая площадь</b><br> -№3- <br>все интересные места находятся очень близко</p>
+            <p class="advantages__description"><b>Небольшая площадь</b><span> -№3- </span>все интересные места находятся очень близко</p>
           </li>
           <li class="advantages__item">
-            <p class="advantages__description"><b>Красивая дорога</b><br> -№4- <br>ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="advantages__description"><b>Красивая дорога</b><span> -№4- </span>ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="advantages__item">
-            <p class="advantages__description"><b>Мало туристов</b><br> -№5- <br>большинство едет в гранд каньон и толпится там</p>
+            <p class="advantages__description"><b>Мало туристов</b><span> -№5- </span>большинство едет в гранд каньон и толпится там</p>
           </li>
         </ul>
       </section>

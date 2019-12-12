@@ -7,18 +7,20 @@
 
 .search b {
   display: block;
-  padding-top: 33px;
+  padding-top: 30px;
+  padding-bottom: 5px;
 
   @include text (21px, 26px, center);
 }
 
 .search__text {
   display: block;
-  margin-bottom: 40px;
-  padding-right: 28px;
-  padding-left: 28px;
+  margin-bottom: 35px;
+  padding-right: 30px;
+  padding-left: 30px;
 
-  @include text (14px, 21px, center);
+  @include text (14px, 24px, center);
+  color: $font-color-grey;
 }
 
 .map {
@@ -40,7 +42,7 @@
   @include size (27px, 27px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .search {
     width: 768px;
     padding-bottom: 0;
@@ -48,14 +50,14 @@
 
   .search b {
     font-size: 30px;
-    padding-top: 57px;
+    padding-top: 55px;
   }
 
   .search__text {
     margin-top: 30px;
-    margin-bottom: 47px;
-    padding-left: 170px;
-    padding-right: 170px;
+    margin-bottom: 42px;
+    padding-left: 167px;
+    padding-right: 167px;
   }
 
   .map {
@@ -75,15 +77,15 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .search {
     width: 1200px;
   }
 
   .search__text {
-    margin-bottom: 52px;
-    padding-left: 380px;
-    padding-right: 380px;
+    margin-bottom: 48px;
+    padding-left: 383px;
+    padding-right: 383px;
   }
 
   .map {

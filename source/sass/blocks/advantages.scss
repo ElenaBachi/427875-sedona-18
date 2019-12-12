@@ -10,17 +10,41 @@
 .advantages__header {
   position: relative;
 
-  margin-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 33px;
+}
+
+.advantages__header::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+
+  @include size (322px, 37px);
+
+  background-image: url("../img/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 320px 37px;
 }
 
 .advantages__slogan {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+
   @include text (18px, 26px, center);
-  color: $font-color-dark;
+  color: $font-color-black;
 }
 
 .advantages__intro {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
+
   line-height: 26px;
-  color: $font-color-dark;
+  color: $font-color-black;
 }
 
 .advantages__list {
@@ -29,8 +53,8 @@
 
 .advantages__item:nth-child(1) {
   min-height: 471px;
-  margin-bottom: 40px;
-  padding: 61px 27px 45px 28px;
+  margin-bottom: 38px;
+  padding: 60px 27px 42px 28px;
   box-sizing: border-box;
 
   background-color: $main-color-blue;
@@ -42,7 +66,7 @@
 
 .advantages__item:nth-child(3) {
   min-height: 451px;
-  padding: 45px 31px 42px 30px;
+  padding: 41px 31px 39px 30px;
   box-sizing: border-box;
 
   background-color: $main-color-blue;
@@ -55,10 +79,20 @@
 .advantages__item:nth-child(n+4) {
   position: relative;
 
-  @include padding(33px, 41px);
-  color: $font-color-dark;
+  @include padding(29px, 41px);
+  color: $font-color-black;
 
   background-color: $main-color-grey;
+}
+
+.advantages__item:nth-child(5) {
+  padding-left: 55px;
+  border-left: 55px;
+}
+
+.advantages__item:nth-child(6) {
+  padding-left: 37px;
+  border-left: 37px;
 }
 
 .advantages__item:nth-child(5)::before,
@@ -75,6 +109,9 @@
 }
 
 .advantages__description {
+  margin: 0;
+  padding: 0;
+
   @include text (14px, 21px, center);
 }
 
@@ -82,12 +119,16 @@
   @include text (18px, 26px, center);
 }
 
+.advantages__description span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .advantages__sublist {
   @include list-reset();
-  margin-bottom: 40px;
-
   @include text(14px, 21px, left);
-  color: $font-color-dark;
+  color: $font-color-black;
 
   background-color: $main-color;
 }
@@ -95,8 +136,25 @@
 .sublist li {
   position: relative;
 
+  margin-bottom: 33px;
   padding-left: 69px;
   padding-right: 41px;
+}
+
+.sublist p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.sublist h3 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .sublist__accommodation::before {
@@ -107,7 +165,7 @@
   width: 37px;
   height: 36px;
   position: absolute;
-  left: 20px;
+  left: 22px;
   top: -10px;
 }
 
@@ -119,8 +177,8 @@
   width: 32px;
   height: 38px;
   position: absolute;
-  left: 20px;
-  top: -10px;
+  left: 25px;
+  top: -15px;
 }
 
 .sublist__food::before {
@@ -131,16 +189,11 @@
   width: 40px;
   height: 35px;
   position: absolute;
-  left: 20px;
+  left: 18px;
   top: -10px;
 }
 
-.sublist h3 {
-  font-size: 18px;
-  line-height: 26px;
-}
-
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .advantages {
     width: 768px;
   }
@@ -148,7 +201,7 @@
   .advantages__header {
     position: relative;
 
-    margin-bottom: 55px;
+    margin-bottom: 49px;
     padding-left: 139px;
     padding-right: 139px;
   }
@@ -171,8 +224,10 @@
   .advantages__item:nth-child(1) {
     min-height: 256px;
     margin-bottom: 0;
-    padding: 47px;
+    padding-left: 47px;
     padding-right: 559px;
+    padding-top: 44px;
+    padding-bottom: 45px;
 
     background-image: url("../img/main-city-tablet@1x.jpg");
     background-repeat: no-repeat;
@@ -182,8 +237,10 @@
 
   .advantages__item:nth-child(3) {
     min-height: 256px;
-    padding: 50px;
+    padding-right: 51px;
     padding-left: 562px;
+    padding-top: 48px;
+    padding-bottom: 44px;
 
     background-image: url("../img/photo-bridge-tablet@1x.jpg");
     background-repeat: no-repeat;
@@ -195,7 +252,8 @@
     width: 256px;
     margin: 0;
 
-    @include padding(50px, 60px);
+    @include padding(48px, 60px);
+    padding-bottom: 45px;
     box-sizing: border-box;
   }
 
@@ -220,10 +278,10 @@
     position: relative;
 
     width: 256px;
-    padding-top: 164px;
+    padding-top: 162px;
     padding-left: 45px;
     padding-right: 45px;
-    padding-bottom: 60px;
+    padding-bottom: 63px;
   }
 
   .sublist__accommodation {
@@ -280,7 +338,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .advantages {
     width: 1200px;
   }
@@ -296,8 +354,10 @@
   }
 
   .advantages__item:nth-child(1) {
-    padding: 60px;
+    padding-left: 68px;
     padding-right: 865px;
+    padding-top: 51px;
+    padding-bottom: 60px;
 
     background-image: url("../img/main-city-desktop@1x.jpg");
     background-repeat: no-repeat;
@@ -306,8 +366,10 @@
   }
 
   .advantages__item:nth-child(3) {
-    padding: 60px;
+    padding-right: 93px;
     padding-left: 865px;
+    padding-top: 56px;
+    padding-bottom: 57px;
 
     background-image: url("../img/photo-bridge-desktop@1x.jpg");
     background-repeat: no-repeat;
@@ -318,7 +380,8 @@
   .advantages__item:nth-child(n+4) {
     width: 400px;
 
-    @include padding(50px, 70px);
+    @include padding(48px, 70px);
+    padding-bottom: 67px;
   }
 
   .advantages__sublist {
@@ -327,10 +390,10 @@
 
   .sublist li {
     width: 400px;
-    padding-top: 164px;
+    padding-top: 162px;
     padding-left: 73px;
     padding-right: 45px;
-    padding-bottom: 85px;
+    padding-bottom: 82px;
   }
 
   .sublist__accommodation::before {
