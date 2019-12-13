@@ -124,6 +124,8 @@
 
 .main-nav__list {
   @include list-reset();
+
+  background-color: $main-color-blue;
 }
 
 .main-nav__list a {
@@ -139,7 +141,6 @@
   color: #ffffff;
   font-weight: bold;
 
-  background-color: $main-color-blue;
   border-bottom: 1px solid rgba(#010101, 0.2%);
   border-top: 1px solid rgba(#ffffff, 0.2%);
 }
