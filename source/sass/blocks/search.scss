@@ -1,104 +1,62 @@
 .search {
   width: 320px;
-  padding-bottom: 10px;
+  padding-bottom: 49px;
 
   background-color: $main-color;
 }
 
 .search b {
   display: block;
+  margin: 0;
+  padding: 0;
   padding-top: 30px;
-  padding-bottom: 5px;
+  padding-bottom: 18px;
 
   @include text (21px, 26px, center);
 }
 
 .search__text {
   display: block;
+  margin: 0;
+  padding: 0;
   margin-bottom: 35px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 25px;
+  padding-left: 25px;
 
   @include text (14px, 24px, center);
   color: $font-color-grey;
 }
 
-.map {
-  position: relative;
-
-  margin-top: 49px;
-
-  background-image: url("../img/bg-map-mobile@1x.jpg");
-  repeat: no-repeat;
-  width: 320px;
-  height: 350px;
-}
-
-.map__point {
-  position: absolute;
-  top: 161px;
-  left: 146px;
-
-  @include size (27px, 27px);
-}
-
 @media (min-width: $tablet-width) {
   .search {
     width: 768px;
-    padding-bottom: 0;
+    padding-bottom: 58px;
   }
 
   .search b {
     font-size: 30px;
     padding-top: 55px;
+    padding-bottom: 30px;
   }
 
   .search__text {
-    margin-top: 30px;
+    margin: 0;
+    padding: 0;
     margin-bottom: 42px;
     padding-left: 167px;
     padding-right: 167px;
-  }
-
-  .map {
-    margin-top: 58px;
-
-    background-image: url("../img/bg-map-tablet@1x.jpg");
-    width: 768px;
-  }
-
-  .map__point {
-    top: 164px;
-    left: 370px;
-  }
-
-  iframe {
-    width: 768px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .search {
     width: 1200px;
+    padding-bottom: 66px;
   }
 
   .search__text {
     margin-bottom: 48px;
     padding-left: 383px;
     padding-right: 383px;
-  }
-
-  .map {
-    background-image: url("../img/bg-map-desktop@1x.jpg");
-    width: 1200px;
-  }
-
-  .map__point {
-    top: 162px;
-    left: 586px;
-  }
-
-  iframe {
-    width: 1200px;
   }
 }

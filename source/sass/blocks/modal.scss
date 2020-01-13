@@ -1,0 +1,38 @@
+.modal {
+  position: fixed;
+
+  display: none;
+
+  text-transform: uppercase;
+
+  background-color: $main-color;
+
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15%);
+}
+
+.modal b {
+  display: block;
+  margin-bottom: 25px;
+
+  @include text (18px, 26px, center);
+  color: $font-color-black;
+}
+
+.modal p {
+  @include text (14px, 24px, center);
+  color: $font-color-grey;
+}
+
+.modal button {
+  @include text (18px, 26px, center);
+}
+
+@media (min-width: 768px) {
+  .modal b {
+    font-size: 30px;
+  }
+
+  .modal button {
+    font-size: 21px;
+  }
+}

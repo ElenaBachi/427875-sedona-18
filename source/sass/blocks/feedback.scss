@@ -3,7 +3,7 @@
 
   width: 320px;
 
-  @include text (16px, 26px, center);
+  @include text (18px, 26px, center);
   color: $font-color-black;
 
   background-color: $main-color;
@@ -13,7 +13,7 @@
   margin: 0;
   padding: 22px;
   padding-bottom: 17px;
-  padding-top: 10px;
+  padding-top: 12px;
 }
 
 .feedback__title {
@@ -21,6 +21,9 @@
   margin: 0;
   padding: 0;
   margin-bottom: 25px;
+
+  font: inherit;
+  font-weight: bold;
 }
 
 .feedback__text {
@@ -34,15 +37,16 @@
 }
 
 .feedback__form {
-  margin-left: 20px;
-  margin-right: 20px;
-
   @include text (16px, 26px, center);
   text-align: left;
 }
 
 .feedback__form div {
   border-top: 1px solid rgba(#000000, 0.1%);
+}
+
+.feedback__form div.review__submit {
+  border: none;
 }
 
 .feedback__form p {
@@ -61,6 +65,8 @@
   color: $font-color-black;
   text-transform: none;
   font-weight: bold;
+
+  box-sizing: border-box;
 }
 
 .feedback__form input::placeholder,
@@ -85,6 +91,10 @@
   @include list-reset ();
 }
 
+.feedback__legend {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .feedback {
     width: 768px;
@@ -94,11 +104,13 @@
 
   .feedback__header {
     padding: 165px;
-    padding-bottom: 77px;
+    padding-bottom: 74px;
     padding-top: 71px;
   }
 
   .feedback__title {
+    margin-bottom: 35px;
+
     font-size: 30px;
     line-height: 26px;
   }
@@ -118,395 +130,10 @@
 
     font-size: 21px;
   }
-}
-
-@media (min-width: $desktop-width) {
-  .feedback {
-    width: 1200px;
-  }
-
-  .feedback__header {
-    padding: 380px;
-    padding-bottom: 62px;
-    padding-top: 105px;
-  }
-
-  .feedback__form {
-    margin-left: 120px;
-    margin-right: 120px;
-  }
-}
-
-.review__username ul,
-.review__contacts ul {
-  width: 100%;
-}
-
-.review__username li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.review__contacts li {
-  display: flex;
-  flex-direction: column;
-
-  margin-bottom: 14px;
-}
-
-.review__username input,
-.review__contacts input {
-  padding: 16px;
-  padding-left: 22px;
-  padding-right: 0;
-
-  font-size: 18px;
-  line-height: 26px;
-  color: $font-color-black;
-  text-transform: none;
-  font-weight: bold;
-
-  background-color: $main-color-back;
-
-  border: none;
-
-  cursor: pointer;
-}
-
-.review__username input:hover,
-.review__contacts input:hover {
-  background-color: #e5e5e5;
-}
-
-.review__username input:active,
-.review__contacts input:active,
-.review__username input:focus,
-.review__contacts input:focus {
-  background-color: $main-color;
-  border: 4px solid #e5e5e5;
-  outline: none;
-
-  box-sizing: border-box;
-}
-
-.review__username input {
-  width: 100%;
-}
-
-.review__username label {
-  margin-right: 10px;
-}
-
-.review__contacts label {
-  margin-bottom: 8px;
-  margin-left: 22px;
-}
-
-.contacts__item input {
-  padding-right: 58px;
-
-  background-size: 18px 18px;
-  background-repeat: no-repeat;
-  background-position: 95% center;
-  background-color: $main-color-grey;
-}
-
-.contacts__item:first-child input {
-  background-image: url("../img/icon-phone.svg");
-}
-
-.contacts__item:last-child input {
-  background-image: url("../img/icon-mail.svg");
-}
-
-.review__impression p {
-  margin-bottom: 39px;
-}
-
-.review__sights p {
-  margin-bottom: 37px;
-}
-
-.review__impression li {
-  margin-bottom: 44px;
-  padding-left: 83px;
-}
-
-.review__impression li:last-child {
-  margin-bottom: 42px;
-}
-
-.review__sights li {
-  margin-bottom: 55px;
-  padding-left: 83px;
-}
-
-.review__sights li:last-child {
-  margin-bottom: 40px;
-}
-
-.review__impression label,
-.review__sights label {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  color: $font-color-black;
-  text-transform: none;
-}
-
-.review__radio + label::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: -83px;
-
-  @include size (46px, 46px);
-
-  background-color: #f2f2f2;
-
-  border: 5px solid #f2f2f2;
-  border-radius: 50%;
-}
-
-.review__radio:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: -65px;
-
-  @include size (16px, 16px);
-
-  background-color: #333333;
-
-  border: 3px solid #333333;
-  border-radius: 50%;
-}
-
-.review__radio:hover + label::before,
-.review__radio:focus + label::before {
-  background-color: #e5e5e5;
-
-  border: 5px solid #e5e5e5;
-  border-radius: 50%;
-}
-
-.review__radio:active + label::before {
-  background-color: #d5d5d5;
-
-  border: 5px solid #d5d5d5;
-  border-radius: 50%;
-}
-
-.review__radio:checked:active + label::after,
-.review__radio:checked:focus + label::after {
-  background-color: rgba(#333333, 0.3%);
-
-  border: 3px solid rgba(#333333, 0.3%);
-}
-
-.review__checkbox + label::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: -83px;
-
-  @include size (46px, 46px);
-
-  background-color: #f2f2f2;
-
-  border: 5px solid #f2f2f2;
-  border-radius: 8px;
-}
-
-.review__checkbox:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -65px;
-
-  @include size (24px, 16px);
-
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.review__checkbox:hover + label::before,
-.review__checkbox:focus + label::before {
-  background-color: #e5e5e5;
-
-  border: 5px solid #e5e5e5;
-  border-radius: 8px;
-}
-
-.review__checkbox:active + label::before {
-  background-color: #d5d5d5;
-
-  border: 5px solid #d5d5d5;
-  border-radius: 8px;
-}
-
-.review__checkbox:checked:active + label::after,
-.review__checkbox:checked:focus + label::after {
-  background-image: url("../img/icon-tick.svg");
-  opacity: 0.3;
-}
-
-.review__textarea textarea {
-  display: block;
-  margin: 0 auto;
-  padding-top: 18px;
-  padding-left: 20px;
-  padding-right: 33px;
-  width: 100%;
-  box-sizing: border-box;
-
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: bold;
-
-  background-color: #f2f2f2;
-
-  border: none;
-
-  resize: none;
-}
-
-.review__submit {
-  display: block;
-  margin: 0 auto;
-  margin-top: 51px;
-
-  font-size: 18px;
-  box-sizing: border-box;
-}
-
-.feedback__legend {
-  display: none;
-}
-
-@media (min-width: $tablet-width) {
-  .review {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .review__username {
-    position: relative;
-
-    margin-left: auto;
-    margin-bottom: 53px;
-    width: 42%;
-  }
-
-  .review__username p,
-  .review__impression p {
-    text-align: left;
-  }
-
-  .review__username p {
-    margin-bottom: 58px;
-  }
-
-  .review__contacts {
-    position: relative;
-
-    width: 100%;
-    margin-bottom: 31px;
-  }
-
-  .review__contacts p {
-    margin-bottom: 24px;
-  }
-
-  .review__contacts li {
-    margin-bottom: 25px;
-  }
-
-  .review__impression {
-    order: -1;
-  }
-
-  .review__impression p {
-    margin-bottom: 75px;
-  }
-
-  .review__impression li {
-    margin-bottom: 53px;
-    padding-left: 75px;
-  }
-
-  .review__impression li:last-child {
-    margin-bottom: 0;
-  }
-
-  .review__sights {
-    position: relative;
-
-    margin-bottom: 33px;
-  }
-
-  .review__sights p {
-    margin-bottom: 59px;
-    padding-left: 185px;
-    padding-right: 185px;
-  }
-
-  .review__sights ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 72%;
-  }
-
-  .review__sights li {
-    margin-bottom: 53px;
-    padding-left: 75px;
-    box-sizing: border-box;
-    width: 45%;
-  }
-
-  .review__sights li:last-child {
-    margin-bottom: 53px;
-  }
-
-  .review__textarea {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  .review__textarea p {
-    margin-bottom: 57px;
-  }
-
-  .review__textarea textarea {
-    margin-bottom: 58px;
-    padding-right: 0;
-
-    font-size: 18px;
-    line-height: 26px;
-  }
-
-  .review__submit {
-    margin: 0;
-    margin-right: auto;
-    margin-bottom: 60px;
-
-    @include padding(18px, 47px);
-    width: 50%;
-  }
 
   .feedback__legend {
     position: absolute;
-    bottom: 82px;
+    bottom: 74px;
     right: 60px;
 
     display: block;
@@ -521,161 +148,27 @@
 
     font-size: 90%;
   }
-
-  .review__username::before {
-    content: "";
-
-    position: absolute;
-    top: 3px;
-    right: 324px;
-
-    width: 1px;
-    height: 292px;
-
-    background-color: rgba(#000000, 0.1%);
-    background-repeat: no-repeat;
-  }
-
-  .review__contacts::before,
-  .review__sights::before,
-  .review__textarea::before {
-    content: "";
-
-    position: absolute;
-    top: 13px;
-    left: 0;
-
-    width: 118px;
-    height: 1px;
-
-    background-color: rgba(#000000, 0.1%);
-    background-repeat: no-repeat;
-    background-size: 100% 1px;
-  }
-
-  .review__contacts::after,
-  .review__sights::after,
-  .review__textarea::after {
-    content: "";
-
-    position: absolute;
-    top: 13px;
-    right: 0;
-
-    width: 118px;
-    height: 1px;
-
-    background-color: rgba(#000000, 0.1%);
-    background-repeat: no-repeat;
-    background-size: 100% 1px;
-  }
 }
 
 @media (min-width: $desktop-width) {
-  .review__username {
-    margin-bottom: 55px;
+  .feedback {
+    width: 1200px;
   }
 
-  .review__username::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    right: 479px;
+  .feedback__header {
+    padding: 380px;
+    padding-bottom: 60px;
+    padding-top: 108px;
   }
 
-  .review__contacts {
-    margin-bottom: 56px;
-  }
-
-  .review__contacts p {
-    margin-bottom: 74px;
-  }
-
-  .review__contacts ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .review__contacts li {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0;
-    width: 50%;
-  }
-
-  .review__contacts li:first-child {
-    width: 42%;
-  }
-
-  .phone-hidden {
-    display: none;
-  }
-
-  .review__contacts label {
-    margin: 0;
-    padding: 0;
-    margin-right: 15px;
-  }
-
-  .review__contacts input {
-    width: 100%;
-  }
-
-  .contacts__list li:first-child {
-    width: 42%;
-  }
-
-  .review__impression p {
-    text-align: center;
-  }
-
-  .review__impression li,
-  .review__sights li {
-    padding-left: 75px;
-  }
-
-  .review__sights {
-    margin-bottom: 31px;
-  }
-
-  .review__sights p {
-    margin-bottom: 62px;
-    padding-left: 340px;
-    padding-right: 340px;
-  }
-
-  .review__sights ul {
-    width: 100%;
-    margin: 0;
-  }
-
-  .review__sights li {
-    width: 21%;
-  }
-
-  .review__submit {
-    margin-bottom: 66px;
+  .feedback__form {
+    margin-left: 120px;
+    margin-right: 120px;
   }
 
   .feedback__legend {
     position: absolute;
-    bottom: 90px;
+    bottom: 79px;
     right: 121px;
-  }
-
-  .review__contacts::before,
-  .review__sights::before,
-  .review__textarea::before {
-    width: 280px;
-  }
-
-  .review__contacts::after,
-  .review__sights::after,
-  .review__textarea::after {
-    width: 280px;
   }
 }

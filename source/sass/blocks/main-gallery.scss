@@ -8,6 +8,18 @@
   background-color: $main-color;
 }
 
+@media (min-width: $tablet-width) {
+  .main-gallery {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-gallery {
+    width: 1200px;
+  }
+}
+
 .main-gallery__header {
   padding-left: 25px;
   padding-right: 25px;
@@ -19,7 +31,7 @@
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 
   font-size: 18px;
   line-height: 26px;
@@ -33,223 +45,26 @@
   color: $font-color-grey;
 }
 
-.photo-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  @include list-reset();
-
-  text-align: left;
-}
-
-.photo-list__item {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-top: 22px;
-}
-
-.photo-list__item::before {
-  content: "";
-
-  @include size (320px, 1px);
-
-  background-color: rgba(#000000, 0.1%);
-
-  position: absolute;
-  top: 0;
-  left: -20px;
-}
-
-.photo-list__item:last-child::after {
-  content: "";
-
-  @include size (320px, 1px);
-
-  background-color: rgba(#000000, 0.1%);
-
-  position: absolute;
-  bottom: 0;
-  left: -20px;
-}
-
-.photo-list__image {
-  display: block;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 17px;
-}
-
-.photo-list__description {
-  color: $font-color-grey;
-  text-transform: none;
-}
-
-.photo-list__description b {
-  color: $font-color-black;
-  text-transform: uppercase;
-}
-
-.photo-list__rating {
-  display: block;
-  margin: 0;
-  padding: 0;
-  margin-top: 5px;
-  margin-bottom: 14px;
-
-  font-weight: bold;
-}
-
-.photo-list__rating img {
-  margin-right: 14px;
-  width: 23px;
-  height: 21px;
-}
-
 @media (min-width: $tablet-width) {
-  .main-gallery {
-    width: 768px;
-  }
-
   .main-gallery__header {
     padding-left: 170px;
     padding-right: 170px;
-    padding-top: 76px;
+    padding-top: 75px;
     padding-bottom: 70px;
   }
 
   .main-gallery__title {
+    margin-bottom: 30px;
+
     font-size: 30px;
-  }
-
-  .photo-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .photo-list__item {
-    margin: 0;
-    padding-top: 0;
-
-    background-color: #f2f2f2;
-  }
-
-  .photo-list__item:nth-child(1) {
-    width: 100%;
-    margin-right: 60px;
-    margin-left: 60px;
-  }
-
-  .photo-list__item:nth-child(3) {
-    background-color: #eaeaea;
-  }
-
-  .photo-list__item:nth-child(n+2) {
-    width: 324px;
-  }
-
-  .photo-list__item:last-child {
-    margin-right: auto;
-    margin-left: 60px;
-  }
-
-  .photo-list__item::before,
-  .photo-list__item:last-child::after {
-    content: none;
-  }
-
-  .photo-list__item:nth-child(1) img.photo-list__image {
-    width: 100%;
-    height: auto;
-  }
-
-  .photo-list__item:nth-child(n+2) img.photo-list__image {
-    width: 100%;
-    height: auto;
-  }
-
-  .photo-list__image {
-    margin-bottom: 0;
-  }
-
-  .photo-list__caption {
-    display: flex;
-    justify-content: space-between;
-
-    padding: 20px;
-    padding-top: 17px;
-    padding-bottom: 16px;
-  }
-
-  .photo-list__rating img {
-    margin-right: 10px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-gallery {
-    width: 1200px;
-  }
-
   .main-gallery__header {
     padding-left: 385px;
-    padding-right: 387px;
-    padding-top: 113px;
+    padding-right: 385px;
+    padding-top: 110px;
     padding-bottom: 72px;
-  }
-
-  .photo-list {
-    width: 1200px;
-
-    color: $main-color;
-  }
-
-  .photo-list__item {
-    position: relative;
-
-    background-color: $main-color;
-  }
-
-  .photo-list__item:nth-child(1) {
-    width: 1200px;
-    margin: 0;
-  }
-
-  .photo-list__item:nth-child(3) {
-    background-color: $main-color;
-  }
-
-  .photo-list__item:nth-child(n+2) {
-    width: 400px;
-  }
-
-  .photo-list__item:last-child {
-    margin-left: 0;
-  }
-
-  .photo-list__caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 400px;
-    box-sizing: border-box;
-
-    background-color: rgba(#000000, 0.3%);
-  }
-
-  .photo-list__description,
-  .photo-list__description b {
-    color: $main-color;
-  }
-
-  .photo-list__item:nth-child(1) .photo-list__caption {
-    width: 100%;
   }
 }

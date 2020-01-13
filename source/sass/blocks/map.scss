@@ -1,0 +1,51 @@
+.map {
+  position: relative;
+
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  repeat: no-repeat;
+  background-size: 320px 350px;
+}
+
+.map__point {
+  position: absolute;
+  top: 161px;
+  left: 146px;
+
+  @include size (27px, 27px);
+}
+
+iframe {
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    width: 768px;
+  }
+
+  iframe {
+    width: 768px;
+  }
+
+  .map__point {
+    top: 164px;
+    left: 370px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    width: 1200px;
+  }
+
+  iframe {
+    width: 1200px;
+  }
+
+  .map__point {
+    top: 162px;
+    left: 586px;
+  }
+}
