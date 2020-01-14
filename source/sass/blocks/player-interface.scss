@@ -61,13 +61,13 @@
   margin-right: 31px;
 }
 
-.player-interface__controls-fulscreen {
+.player-interface__controls-fullscreen {
   margin-right: 23px;
 }
 
 .player-interface__controls-replay,
 .player-interface__controls-subtitles,
-.player-interface__controls-fulscreen {
+.player-interface__controls-fullscreen {
   fill: #5c6870;
 
   &:hover,
@@ -114,15 +114,17 @@
     background-color: transparent;
   }
 
-  .player-interface__controls--replay {
+  .player-interface__controls-replay {
     margin-left: 35px;
   }
 
-  .player-interface__controls--fulscreen {
+  .player-interface__controls-fullscreen {
     margin-right: 41px;
   }
 
-  .player-interface__controls svg {
+  .player-interface__controls-replay,
+  .player-interface__controls-subtitles,
+  .player-interface__controls-fullscreen {
     fill: #ffffff;
 
     &:hover,
