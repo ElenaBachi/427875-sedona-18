@@ -1,0 +1,42 @@
+.modal-error {
+  top: 56px;
+
+  width: 320px;
+  padding: 57px;
+  padding-top: 42px;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+}
+
+.modal-error p {
+  margin-bottom: 24px;
+}
+
+.modal-error button {
+  width: 180px;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-error {
+    top: 380px;
+    left: 50%;
+
+    width: 400px;
+    margin-left: -200px;
+    padding: 61px;
+    padding-top: 59px;
+    padding-bottom: 49px;
+  }
+
+  .modal-error b {
+    line-height: 40px;
+  }
+
+  .modal-error p {
+    margin-bottom: 34px;
+  }
+
+  .modal-error button {
+    width: 272px;
+  }
+}

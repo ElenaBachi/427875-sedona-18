@@ -1,0 +1,54 @@
+.modal-success {
+  top: 383px;
+
+  width: 320px;
+  padding-top: 45px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.modal-success p {
+  margin-bottom: 35px;
+  padding-left: 53px;
+  padding-right: 53px;
+}
+
+.modal-success div {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: $main-color-back;
+}
+
+.modal-success button {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-success {
+    top: 30px;
+    left: 50%;
+
+    width: 640px;
+    padding-top: 64px;
+    margin-left: -320px;
+  }
+
+  .modal-success p {
+    padding-left: 112px;
+    padding-right: 112px;
+  }
+
+  .modal-success div {
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .modal-success button {
+    display: block;
+    margin: 0 auto;
+  }
+}

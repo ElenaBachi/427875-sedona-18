@@ -1,0 +1,174 @@
+.feedback {
+  position: relative;
+
+  width: 320px;
+
+  @include text (18px, 26px, center);
+  color: $font-color-black;
+
+  background-color: $main-color;
+}
+
+.feedback__header {
+  margin: 0;
+  padding: 22px;
+  padding-bottom: 17px;
+  padding-top: 12px;
+}
+
+.feedback__title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+
+  font: inherit;
+  font-weight: bold;
+}
+
+.feedback__text {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: $font-color-grey;
+}
+
+.feedback__form {
+  @include text (16px, 26px, center);
+  text-align: left;
+}
+
+.feedback__form div {
+  border-top: 1px solid rgba(#000000, 0.1%);
+}
+
+.feedback__form div.review__submit {
+  border: none;
+}
+
+.feedback__form p {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.feedback__form input {
+  font: inherit;
+  color: $font-color-black;
+  text-transform: none;
+  font-weight: bold;
+
+  box-sizing: border-box;
+}
+
+.feedback__form input::placeholder,
+.feedback__form textarea::placeholder {
+  color: $font-color-black;
+}
+
+.feedback__form label {
+  position: relative;
+
+  display: block;
+
+  font-size: 14px;
+  line-height: 26px;
+  color: $font-color-grey;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.feedback__form ul {
+  @include list-reset ();
+}
+
+.feedback__legend {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    width: 768px;
+
+    @include text (18px, 26px, center);
+  }
+
+  .feedback__header {
+    padding: 165px;
+    padding-bottom: 74px;
+    padding-top: 71px;
+  }
+
+  .feedback__title {
+    margin-bottom: 35px;
+
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .feedback__form {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .feedback__form div {
+    border-top: none;
+  }
+
+  .feedback__form p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 21px;
+  }
+
+  .feedback__legend {
+    position: absolute;
+    bottom: 74px;
+    right: 60px;
+
+    display: block;
+
+    font-size: 14px;
+    line-height: 26px;
+    color: $font-color-grey;
+  }
+
+  .feedback__legend sup {
+    top: -0.25em;
+
+    font-size: 90%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    width: 1200px;
+  }
+
+  .feedback__header {
+    padding: 380px;
+    padding-bottom: 60px;
+    padding-top: 108px;
+  }
+
+  .feedback__form {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .feedback__legend {
+    position: absolute;
+    bottom: 79px;
+    right: 121px;
+  }
+}

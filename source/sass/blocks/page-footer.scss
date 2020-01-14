@@ -3,120 +3,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 41px;
+  padding-top: 35px;
+  padding-bottom: 23px;
 
   background-color: $main-color;
 }
 
-.social b {
-  @include text (21px, 26px, center);
-  color: $font-color-dark;
-}
-
-.social__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 150px;
-
-  @include list-reset();
-  margin-top: 31px;
-  margin-bottom: 41px;
-}
-
-.social__link {
-  display: block;
-  width: 46px;
-  height: 48px;
-
-  @include padding (15px, 13px);
-  box-sizing: border-box;
-
-  background-color: $main-color-blue;
-}
-
-.social__link:hover,
-.social__link:focus {
-  background-color: #669ec0;
-}
-
-.social__link:visited {
-  background-color: #5496bd;
-}
-
-.social__link path {
-  fill: #ffffff;
-}
-
-.social__link:visited path {
-  fill: rbga(#ffffff, 30%);
-}
-
-.copyright {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 130px;
-}
-
-.copyright__text {
-  margin-right: 11px;
-
-  font-size: 14px;
-  line-height: 26px;
-}
-
-.copyright__link path {
-  fill: #000000;
-}
-
-.copyright__link:hover path,
-.copyright__link:focus path {
-  fill: $main-color-blue;
-}
-
-.copyright__link:active path {
-  fill: rgba(#000000, 0.3%);
-}
-
-
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .page-footer {
     flex-direction: row;
     justify-content: space-between;
 
-    padding-top: 0;
-  }
-
-  .page-footer__social {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 398px;
-    margin-left: auto;
-  }
-
-  .social__list {
-    @include margin (36px, 0);
-  }
-
-  .copyright {
-    margin-right: auto;
-    margin-left: 120px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .page-footer {
-    padding-top: 55px;
-  }
-
-  .page-footer__social {
-    width: 555px;
-  }
-
-  .copyright {
-    margin-left: 276px;
+    padding: 0;
   }
 }

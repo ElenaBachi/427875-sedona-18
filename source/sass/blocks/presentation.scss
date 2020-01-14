@@ -1,224 +1,78 @@
 .presentation {
   width: 320px;
-  padding-bottom: 80px;
+  padding-bottom: 105px;
 
   background-color: $main-color;
 }
 
 .presentation__question {
   display: block;
-  padding-top: 40px;
+  margin: 0;
+  padding: 0;
+  padding-top: 34px;
+  margin-bottom: 25px;
 
   @include text (18px, 26px, center);
 }
 
 .presentation__description {
-  padding-bottom: 40px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 35px;
   padding-left: 42px;
   padding-right: 42px;
 
   font-size: 14px;
   line-height: 24px;
+  color: $font-color-grey;
 }
 
-.video-player__back {
-  width: 320px;
-  height: 201px;
+.presentation__video img {
+  @include size (320px, 201px);
 }
 
-.player-interface {
-  position: relative;
-}
-
-.player-interface__toogle {
-  position: absolute;
-  top: -50px;
-  left: 20px;
-
-  @include size (280px, 45px);
-
-  background-color: rgba(#000000, 0.6%);
-}
-
-.player-interface__bar {
-  position: absolute;
-  top: 18px;
-  left: 57px;
-
-  @include size (10px, 10px);
-
-  border: 1px solid $main-color;
-  border-radius: 50%;
-  background-color: $main-color;
-
-  cursor: pointer;
-}
-
-.player-interface__scale {
-  position: absolute;
-  top: 22px;
-  left: 22px;
-
-  @include size (235px, 3px);
-
-  background-color: rgba($main-color, 0.2%);
-}
-
-.player-interface__controls {
-  position: absolute;
-  top: -5px;
-  left: 20px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  @include size (280px, 66px);
-
-  background-color: $main-color-grey;
-}
-
-.player-interface__controls--replay {
-  margin-right: auto;
-  margin-left: 25px;
-}
-
-.player-interface__controls--subtitles {
-  margin-right: 31px;
-}
-
-.player-interface__controls--fulscreen {
-  margin-right: 23px;
-}
-
-.player-interface__controls--replay path,
-.player-interface__controls--subtitles path,
-.player-interface__controls--fulscreen polygon {
-  fill: #5c6870;
-}
-
-.player-interface__controls--replay:hover path,
-.player-interface__controls--subtitles:hover path,
-.player-interface__controls--fulscreen:hover polygon,
-.player-interface__controls--replay:focus path,
-.player-interface__controls--subtitles:focus path,
-.player-interface__controls--fulscreen:focus polygon {
-  fill: #333333;
-}
-
-.player-interface__controls--replay:active path,
-.player-interface__controls--subtitles:active path,
-.player-interface__controls--fulscreen:active polygon {
-  fill: rgba(#333333, 0.3%);
-}
-
-
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .presentation {
     width: 768px;
-    padding-bottom: 40px;
+    padding-bottom: 35px;
   }
 
   .presentation__question {
+    padding-top: 65px;
+    margin-bottom: 30px;
+
     font-size: 30px;
   }
 
   .presentation__description {
-    padding-bottom: 78px;
-    padding-left: 115px;
-    padding-right: 115px;
+    padding-bottom: 73px;
+    padding-left: 175px;
+    padding-right: 175px;
   }
 
-  .video-player__back {
+  .presentation__video img {
     @include size (648px, 499px);
-  }
-
-  .player-interface {
-    width: 648px;
-    margin: auto;
-  }
-
-  .player-interface__toogle {
-    top: -93px;
-    left: 0;
-
-    @include size (648px, 93px);
-  }
-
-  .player-interface__bar {
-    top: 41px;
-    left: 205px;
-  }
-
-  .player-interface__scale {
-    top: 45px;
-    left: 93px;
-
-    width: 389px;
-  }
-
-  .player-interface__controls {
-    top: -95px;
-    left: 0;
-
-    @include size (648px, 93px);
-
-    background-color: transparent;
-  }
-
-  .player-interface__controls--replay path,
-  .player-interface__controls--subtitles path,
-  .player-interface__controls--fulscreen polygon {
-    fill: #ffffff;
-  }
-
-  .player-interface__controls--replay:hover path,
-  .player-interface__controls--subtitles:hover path,
-  .player-interface__controls--fulscreen:hover polygon,
-  .player-interface__controls--replay:focus path,
-  .player-interface__controls--subtitles:focus path,
-  .player-interface__controls--fulscreen:focus polygon {
-    fill: rgba(#ffffff, 0.6%);
-  }
-
-  .player-interface__controls--replay:active path,
-  .player-interface__controls--subtitles:active path,
-  .player-interface__controls--fulscreen:active polygon {
-    fill: rgba(#333333, 0.3%);
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .presentation {
     width: 1200px;
-    padding-bottom: 85px;
+    padding-bottom: 80px;
+  }
+
+  .presentation__question {
+    padding-top: 72px;
   }
 
   .presentation__description {
-    padding-left: 190px;
-    padding-right: 190px;
+    padding-bottom: 71px;
+    padding-left: 392px;
+    padding-right: 393px;
   }
 
-  .video-player__back {
+  .presentation__video img {
     @include size (800px, 500px);
-  }
-
-  .player-interface {
-    width: 800px;
-  }
-
-  .player-interface__toogle {
-    width: 800px;
-  }
-
-  .player-interface__scale {
-    width: 540px;
-  }
-
-  .player-interface__controls {
-    top: -95px;
-    left: 0;
-
-    width: 800px;
   }
 }

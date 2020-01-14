@@ -1,3 +1,17 @@
+@font-face {
+  font-weight: normal;
+  font-family: "PT Sans";
+  font-style: normal;
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "PT Sans";
+  font-style: normal;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("fonts/ptsansbold.woff") format("woff");
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -6,8 +20,7 @@ body {
   font-family: $font-family;
 
   @include text(18px, 21px, center);
-
-  color: $font-color-dark;
+  color: $font-color-black;
   text-transform: uppercase;
 
   background-color: $main-color-back;
@@ -47,13 +60,13 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 5px 15px 0 rgba(#000101, 0.2%);
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .wrapper {
     width: 768px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .wrapper {
     width: 1200px;
   }

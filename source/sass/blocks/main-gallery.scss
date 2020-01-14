@@ -1,4 +1,6 @@
 .main-gallery {
+  position: relative;
+
   width: 320px;
 
   @include text (14px, 24px, center);
@@ -6,217 +8,63 @@
   background-color: $main-color;
 }
 
+@media (min-width: $tablet-width) {
+  .main-gallery {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-gallery {
+    width: 1200px;
+  }
+}
+
 .main-gallery__header {
-  margin-bottom: 33px;
-  padding-top: 44px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 13px;
+  padding-bottom: 28px;
 }
 
 .main-gallery__title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+
   font-size: 18px;
+  line-height: 26px;
 }
 
-.photo-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 320px;
-
-  @include list-reset();
-
-  text-align: left;
-}
-
-.photo-list__item {
-  position: relative;
-
+.main-gallery__description {
+  display: block;
   margin: 0;
   padding: 0;
-  padding-top: 22px;
+
+  color: $font-color-grey;
 }
 
-.photo-list__item::before {
-  content: "";
-
-  @include size (320px, 1px);
-
-  background-color: rgba(#000000, 0.1%);
-
-  position: absolute;
-  top: 0;
-  left: -20px;
-}
-
-.photo-list__item:nth-child(4)::after {
-  content: "";
-
-  @include size (320px, 1px);
-
-  background-color: rgba(#000000, 0.1%);
-
-  position: absolute;
-  bottom: 0;
-  left: -20px;
-}
-
-.photo-list__image {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 22px;
-}
-
-.photo-list__description {
-  text-transform: none;
-}
-
-.photo-list__description b {
-  text-transform: uppercase;
-}
-
-.photo-list__rating {
-  font-weight: bold;
-}
-
-.photo-list__rating img {
-  margin-right: 10px;
-}
-
-@media (min-width: 768px) {
-  .main-gallery {
-    width: 768px;
-    padding-bottom: 68px;
-  }
-
+@media (min-width: $tablet-width) {
   .main-gallery__header {
-    margin-bottom: 33px;
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-top: 75px;
+    padding-bottom: 70px;
   }
 
   .main-gallery__title {
+    margin-bottom: 30px;
+
     font-size: 30px;
-    line-height: 26px;
-  }
-
-  .photo-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 768px;
-  }
-
-  .photo-list__item {
-    padding-top: 0;
-
-    background-color: #f2f2f2;
-  }
-
-  .photo-list__item:last-child {
-    margin-right: auto;
-    margin-left: 60px;
-  }
-
-  .photo-list__item::before,
-  .photo-list__item:nth-child(4)::after {
-    content: none;
-  }
-
-  .photo-list__item:nth-child(1) {
-    width: 648px;
-  }
-
-  .photo-list__item:nth-child(1) img.photo-list__image {
-    width: 648px;
-    height: 400px;
-  }
-
-  .photo-list__item:nth-child(3) {
-    background-color: #eaeaea;
-  }
-
-  .photo-list__item:nth-child(n+2) {
-    width: 324px;
-  }
-
-  .photo-list__item:nth-child(n+2) img.photo-list__image {
-    width: 324px;
-    height: 267px;
-  }
-
-  .photo-list__image {
-    margin-bottom: 0;
-  }
-
-  .photo-list__caption {
-    display: flex;
-    justify-content: space-between;
-
-    padding: 20px;
   }
 }
 
-@media (min-width: 1200px) {
-  .main-gallery {
-    width: 1200px;
-    padding-bottom: 72px;
-  }
-
+@media (min-width: $desktop-width) {
   .main-gallery__header {
     padding-left: 385px;
     padding-right: 385px;
-  }
-
-  .photo-list {
-    width: 1200px;
-
-    color: $main-color;
-  }
-
-  .photo-list__item {
-    position: relative;
-
-    background-color: $main-color;
-  }
-
-  .photo-list__item:last-child {
-    margin: 0;
-  }
-
-  .photo-list__item:nth-child(1) {
-    width: 1200px;
-  }
-
-  .photo-list__item:nth-child(1) img.photo-list__image {
-    width: 1200px;
-  }
-
-  .photo-list__item:nth-child(3) {
-    background-color: $main-color;
-  }
-
-  .photo-list__item:nth-child(n+2) {
-    width: 400px;
-  }
-
-  .photo-list__item:nth-child(n+2) img.photo-list__image {
-    width: 400px;
-  }
-
-  .photo-list__caption {
-    position: absolute;
-    top: 190px;
-    left: 0;
-
-    width: 400px;
-    padding: 20px;
-    padding-bottom: 0;
-    box-sizing: border-box;
-
-    background-color: rgba(#000000, 0.3%);
-  }
-
-  .photo-list__item:nth-child(1) .photo-list__caption {
-    top: 322px;
-
-    width: 1200px;
+    padding-top: 110px;
+    padding-bottom: 72px;
   }
 }
