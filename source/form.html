@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Оставьте свой отзыв</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="inner-page">
 
@@ -72,11 +72,11 @@
             <ul>
               <li>
                 <label for="user-name">Имя<sup>*</sup>:</label>
-                <input id="user-name" type="text" name="name" placeholder="Петр" required>
+                <input id="user-name" type="text" name="name" placeholder="Петр" required="">
               </li>
               <li>
                 <label for="user-surname">Фамилия<sup>*</sup>:</label>
-                <input id="user-surname" type="text" name="surname" placeholder="Иванов" required>
+                <input id="user-surname" type="text" name="surname" placeholder="Иванов" required="">
               </li>
               <li>
                 <label for="user-patronymic">Отчество:</label>
@@ -89,11 +89,11 @@
             <ul>
               <li class="review__contacts-phone">
                 <label for="user-phone"><span class="phone-hidden">Контактный</span> телефон<sup>*</sup>:</label>
-                <input id="user-phone" type="tel" name="phone" placeholder="Введите телефон" required>
+                <input id="user-phone" type="tel" name="phone" placeholder="Введите телефон" required="">
               </li>
               <li class="review__contacts-email">
                 <label for="user-email">Электронная почта<sup>*</sup>:</label>
-                <input id="user-email" type="email" name="email" placeholder="Введите e-mail" required>
+                <input id="user-email" type="email" name="email" placeholder="Введите e-mail" required="">
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@
             <p>Ваше общее впечатление:</p>
             <ul>
               <li>
-                <input class="visually-hidden review__radio" id="positive-impression" type="radio" name="impression" value="positive" checked>
+                <input class="visually-hidden review__radio" id="positive-impression" type="radio" name="impression" value="positive" checked="">
                 <label for="positive-impression">Скорее положительное</label>
               </li>
               <li>
@@ -118,15 +118,15 @@
             <p>Посещенные достопримечательности:</p>
             <ul>
               <li>
-                <input class="visually-hidden review__checkbox" id="devil-bridge" type="checkbox" name="bridge" checked>
+                <input class="visually-hidden review__checkbox" id="devil-bridge" type="checkbox" name="bridge" checked="">
                 <label for="devil-bridge">Мост Дьявола</label>
               </li>
               <li>
-                <input class="visually-hidden review__checkbox" id="mountain-bell" type="checkbox" name="mountain" checked>
+                <input class="visually-hidden review__checkbox" id="mountain-bell" type="checkbox" name="mountain" checked="">
                 <label for="mountain-bell">Гора-Колокол</label>
               </li>
               <li>
-                <input class="visually-hidden review__checkbox" id="slide-park" type="checkbox" name="park" checked>
+                <input class="visually-hidden review__checkbox" id="slide-park" type="checkbox" name="park" checked="">
                 <label for="slide-park">Слайд-парк</label>
               </li>
               <li>
@@ -196,7 +196,7 @@
       </div>
     </section>
   </div>
-  <script defer src="node_modules/svgxuse/svgxuse.js"></script>
-  <script src="picturefill.min.js"></script>
+  <script src="js/svgxuse.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 </html>
