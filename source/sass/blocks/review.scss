@@ -266,8 +266,8 @@
   opacity: 0.3;
 }
 
-.review__checkbox:disabled + label:before,
-.review__radio:disabled + label:before {
+.review__checkbox:disabled + label::before,
+.review__radio:disabled + label::before {
   background-color: #d5d5d5;
   border-color: #d5d5d5;
 }
@@ -616,7 +616,6 @@
 
   .review__submit button {
     padding-left: 148px;
-
   }
 
   .review__contacts::before,
