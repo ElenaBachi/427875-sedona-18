@@ -112,6 +112,7 @@
 
 .advantages__item:nth-child(3) {
   min-height: 451px;
+  width: 100%;
   padding: 41px 31px 0 30px;
   box-sizing: border-box;
 
@@ -169,6 +170,10 @@
   @include text (18px, 26px, center);
 }
 
+.advantages__item:nth-child(3) br {
+  display: none;
+}
+
 .advantages__description span {
   display: block;
   margin-top: 10px;
@@ -185,6 +190,10 @@
 
   .advantages__description b {
     font-size: 21px;
+  }
+
+  .advantages__item:nth-child(3) br {
+    display: inline;
   }
 
   .advantages__item:nth-child(1) {
@@ -206,7 +215,7 @@
 
   .advantages__item:nth-child(3) {
     min-height: 256px;
-    padding-right: 50px;
+    padding-right: 45px;
     padding-left: 563px;
     padding-top: 45px;
 
@@ -226,6 +235,11 @@
 
     @include padding(44px, 60px);
     box-sizing: border-box;
+  }
+
+  .advantages__item:nth-child(4) {
+    padding-left: 49px;
+    padding-right: 49px;
   }
 
   .advantages__item:nth-child(5)::before,
@@ -250,9 +264,7 @@
     padding-right: 30px;
   }
 
-  .advantages__item:nth-child(4) b,
-  .advantages__item:nth-child(5) b,
-  .advantages__item:nth-child(6) b {
+  .advantages__item:nth-child(n+4) b {
     padding-left: 55px;
     padding-right: 55px;
   }

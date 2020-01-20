@@ -13,7 +13,7 @@
   <div class="wrapper">
 
     <header class="page-header">
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
@@ -44,23 +44,6 @@
       </section>
     </header>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
-
     <main>
 
       <section class="advantages">
@@ -81,7 +64,7 @@
               </li>
               <li class="sublist__souvenir">
                 <h3>Сувениры</h3>
-                <p>Не только китайского, но и местного производства!</p>
+                <p>Не только китайского, <br> но и местного производства!</p>
               </li>
               <li class="sublist__food">
                 <h3>Еда</h3>
@@ -90,7 +73,7 @@
             </ul>
           </li>
           <li class="advantages__item">
-            <p class="advantages__description"><b>Там есть мост дьявола</b><span> &ndash; №2 &ndash; </span>да, по нему можно пройти! Если вы осмелитесь,конечно</p>
+            <p class="advantages__description"><b>Там есть <br> мост дьявола</b><span> &ndash; №2 &ndash; </span>да, по нему можно пройти! Если вы осмелитесь,конечно</p>
           </li>
           <li class="advantages__item">
             <p class="advantages__description"><b>Небольшая площадь</b><span> &ndash; №3 &ndash; </span>все интересные места находятся очень близко</p>
@@ -108,14 +91,14 @@
         <h2 class="visually-hidden">Поиск жилья</h2>
         <b>Заинтересовались?</b>
         <p class="search__text">
-            Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне
+            Укажите предполагаемые даты поездки, <br> и мы покажем Вам лучшие предложения гостиниц в Седоне
         </p>
-        <a href="#" class="search__button button">Найти гостиницу</a>
+        <a href="index.html" class="search__button button">Найти гостиницу</a>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Где находится Седона</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3350859.8645104268!2d-112.02854183438829!3d34.884476591012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1574264414079!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen=""></iframe>
+        <iframe class="map_interactive"  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3350859.8645104268!2d-112.02854183438829!3d34.884476591012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1574264414079!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen=""></iframe>
         <img src="img/map-marker.svg" alt="Седона здесь" class="map__point" width="27" height="27">
       </section>
     </main>
@@ -152,6 +135,7 @@
       </div>
     </footer>
   </div>
+  <script src="js/openmenu.js"></script>
   <script src="js/svgxuse.min.js"></script>
   <script src="js/picturefill.min.js"></script>
 </body>

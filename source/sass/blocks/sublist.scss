@@ -13,6 +13,10 @@
   padding-left: 69px;
   padding-right: 41px;
 
+  &:nth-child(2) br {
+    display: none;
+  }
+
   &:last-child {
     margin-bottom: 38px;
   }
@@ -86,12 +90,14 @@
   .sublist li {
     position: relative;
 
-    width: 33%;
+    width: 33.3%;
     padding-top: 160px;
     padding-left: 45px;
     padding-right: 45px;
     padding-bottom: 62px;
     margin-bottom: 0;
+
+    box-sizing: border-box;
 
     &:last-child {
       margin-bottom: 0;
@@ -152,20 +158,35 @@
   }
 
   .sublist li {
+    margin: 0;
     padding-left: 73px;
     padding-right: 73px;
     padding-top: 160px;
     padding-bottom: 82px;
+
+    &:nth-child(2) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &:nth-child(2) br {
+      display: inline;
+    }
+
+    &:last-child {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
   }
 
   .sublist__souvenir {
-    padding-left: 58px;
-    padding-right: 58px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .sublist__food {
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .sublist__accommodation::before {

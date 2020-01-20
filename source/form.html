@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Оставьте свой отзыв</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="inner-page">
@@ -11,7 +13,7 @@
   <div class="wrapper">
 
     <header class="page-header">
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -41,23 +43,6 @@
         <img src="img/text-sedona.svg" alt="Седона" width="229" height="39">
       </section>
     </header>
-
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
 
     <main>
 
@@ -101,7 +86,7 @@
             <p>Ваше общее впечатление:</p>
             <ul>
               <li>
-                <input class="visually-hidden review__radio" id="positive-impression" type="radio" name="impression" value="positive" checked="">
+                <input class="visually-hidden review__radio" id="positive-impression" type="radio" name="impression" value="positive" checked>
                 <label for="positive-impression">Скорее положительное</label>
               </li>
               <li>
@@ -109,7 +94,7 @@
                 <label for="negative-impression">Скорее отрицательное</label>
               </li>
               <li>
-                <input class="visually-hidden review__radio" id="no-answer" type="radio" name="impression" value="no-answer">
+                <input class="visually-hidden review__radio" id="no-answer" type="radio" name="impression" value="no-answer" >
                 <label for="no-answer">Затрудняюсь ответить</label>
               </li>
             </ul>
@@ -118,15 +103,15 @@
             <p>Посещенные достопримечательности:</p>
             <ul>
               <li>
-                <input class="visually-hidden review__checkbox" id="devil-bridge" type="checkbox" name="bridge" checked="">
+                <input class="visually-hidden review__checkbox" id="devil-bridge" type="checkbox" name="bridge" checked>
                 <label for="devil-bridge">Мост Дьявола</label>
               </li>
               <li>
-                <input class="visually-hidden review__checkbox" id="mountain-bell" type="checkbox" name="mountain" checked="">
+                <input class="visually-hidden review__checkbox" id="mountain-bell" type="checkbox" name="mountain" checked>
                 <label for="mountain-bell">Гора-Колокол</label>
               </li>
               <li>
-                <input class="visually-hidden review__checkbox" id="slide-park" type="checkbox" name="park" checked="">
+                <input class="visually-hidden review__checkbox" id="slide-park" type="checkbox" name="park" checked>
                 <label for="slide-park">Слайд-парк</label>
               </li>
               <li>
@@ -196,6 +181,7 @@
       </div>
     </section>
   </div>
+  <script src="js/openmenu.js"></script>
   <script src="js/svgxuse.min.js"></script>
   <script src="js/picturefill.min.js"></script>
 </body>
