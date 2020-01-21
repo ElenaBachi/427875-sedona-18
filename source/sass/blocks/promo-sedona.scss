@@ -24,6 +24,9 @@
   margin: 0 auto;
 
   @include size(281px, 214px);
+
+  max-width: 281px;
+  max-height: 214px;
 }
 
 @media (min-width: $tablet-width) {
