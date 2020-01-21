@@ -22,6 +22,8 @@
   top: 90px;
 
   margin: 0 auto;
+
+  @include size(281px, 214px);
 }
 
 @media (min-width: $tablet-width) {
@@ -89,6 +91,8 @@
   top: 52px;
 
   margin: 0 auto;
+
+  @include size(230px, 40px);
 }
 
 @media (min-width: $tablet-width) {
