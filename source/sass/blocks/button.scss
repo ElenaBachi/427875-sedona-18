@@ -2,7 +2,7 @@
   display: inline-block;
 
   @include size(280px, 58px);
-  @include padding(16px, 47px);
+  @include padding(16px, 45px);
   box-sizing: border-box;
 
   @include text(21px, 26px, left);
@@ -34,8 +34,8 @@
 
 @media (min-width: $tablet-width) {
   .button {
-    padding-left: 136px;
-    padding-right: 136px;
+    padding-left: 135px;
+    padding-right: 135px;
     width: 458px;
   }
 }

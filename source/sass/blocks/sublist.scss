@@ -93,14 +93,21 @@
 
     width: 33.3%;
     padding-top: 160px;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 41px;
+    padding-right: 41px;
     padding-bottom: 62px;
     margin-bottom: 0;
 
     box-sizing: border-box;
 
+    &:nth-child(2) {
+      padding-left: 37px;
+      padding-right: 37px;
+    }
+
     &:last-child {
+      padding-left: 50px;
+      padding-right: 50px;
       margin-bottom: 0;
     }
   }
@@ -178,16 +185,6 @@
       padding-left: 50px;
       padding-right: 50px;
     }
-  }
-
-  .sublist__souvenir {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .sublist__food {
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .sublist__accommodation::before {
