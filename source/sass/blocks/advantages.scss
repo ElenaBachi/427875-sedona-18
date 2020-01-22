@@ -229,8 +229,8 @@
 
     background-image: url("../img/photo-bridge-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center left;
-    background-size: 512px 256px;
+    background-position: bottom left;
+    background-size: 512px auto;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/photo-bridge-tablet@2x.jpg");
@@ -304,8 +304,8 @@
 
     background-image: url("../img/photo-bridge-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 800px 256px;
+    background-position: center left;
+    background-size: 800px auto;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/photo-bridge-desktop@2x.jpg");

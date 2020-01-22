@@ -52,6 +52,12 @@
   background-color: $main-color-grey;
 }
 
+.player-interface__controls button {
+  background-color: transparent;
+
+  border: none;
+}
+
 .player-interface__controls-replay {
   margin-right: auto;
   margin-left: 25px;
@@ -65,9 +71,9 @@
   margin-right: 23px;
 }
 
-.player-interface__controls-replay,
-.player-interface__controls-subtitles,
-.player-interface__controls-fullscreen {
+.player-interface__controls-replay svg,
+.player-interface__controls-subtitles svg,
+.player-interface__controls-fullscreen svg {
   fill: #5c6870;
 
   &:hover,
@@ -76,7 +82,8 @@
   }
 
   &:active {
-    fill: rgba(#333333, 0.3%);
+    fill: #333333;
+    opacity: 0.3;
   }
 }
 
@@ -122,18 +129,20 @@
     margin-right: 41px;
   }
 
-  .player-interface__controls-replay,
-  .player-interface__controls-subtitles,
-  .player-interface__controls-fullscreen {
+  .player-interface__controls-replay svg,
+  .player-interface__controls-subtitles svg,
+  .player-interface__controls-fullscreen svg {
     fill: #ffffff;
 
     &:hover,
     &:focus {
-      fill: rgba(#ffffff, 0.6%);
+      fill: #ffffff;
+      opacity: 0.6;
     }
 
     &:active {
-      fill: rgba(#ffffff, 0.3%);
+      fill: #ffffff;
+      opacity: 0.3;
     }
   }
 }

@@ -2,10 +2,10 @@
   display: inline-block;
 
   @include size(280px, 58px);
-  @include padding(16px, 0);
+  @include padding(16px, 47px);
   box-sizing: border-box;
 
-  @include text(21px, 26px, center);
+  @include text(21px, 26px, left);
   font-weight: bold;
   color: $font-color-light;
   vertical-align: middle;
@@ -34,6 +34,8 @@
 
 @media (min-width: $tablet-width) {
   .button {
+    padding-left: 136px;
+    padding-right: 136px;
     width: 458px;
   }
 }
