@@ -292,6 +292,7 @@
   width: 100%;
   box-sizing: border-box;
 
+  font-family: $font-family;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -311,7 +312,7 @@
 }
 
 .review__submit button {
-  padding: 0;
+  font-family: $font-family;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -465,11 +466,17 @@
 
     width: 50%;
     margin: 0;
+    padding: 0;
     padding-bottom: 61px;
   }
 
   .review__submit button {
+    margin: 0;
+    padding: 0;
+    padding-left: 64px;
     width: 100%;
+
+    text-align: left;
   }
 
   .review__contacts::before,
@@ -613,6 +620,10 @@
 
   .review__submit {
     padding-bottom: 66px;
+  }
+
+  .review__submit button {
+    padding-left: 148px;
   }
 
   .review__contacts::before,

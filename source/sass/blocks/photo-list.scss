@@ -144,6 +144,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding-top: 15px;
     padding-bottom: 14px;
@@ -161,14 +162,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 62px;
+    width: 65px;
 
     padding-top: 5px;
   }
 
   .photo-list__item:nth-child(n+2) .photo-list__rating {
-    width: 20%;
+    width: 56px;
   }
+
 
   .photo-list__rating svg {
     margin-right: 10px;

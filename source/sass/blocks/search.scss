@@ -27,6 +27,10 @@
   color: $font-color-grey;
 }
 
+.search__text br {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .search {
     width: 768px;
@@ -43,6 +47,10 @@
     margin: 0;
     padding: 0;
     margin-bottom: 42px;
+  }
+
+  .search__text br {
+    display: inline-block;
   }
 }
 

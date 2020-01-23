@@ -5,6 +5,7 @@
   @include padding(16px, 45px);
   box-sizing: border-box;
 
+  font-family: $font-family;
   @include text(21px, 26px, left);
   font-weight: bold;
   color: $font-color-light;

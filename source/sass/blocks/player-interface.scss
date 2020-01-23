@@ -70,10 +70,26 @@
 .player-interface__controls-fullscreen {
   margin-right: 23px;
 }
-
+   /*
 .player-interface__controls-replay svg,
 .player-interface__controls-subtitles svg,
 .player-interface__controls-fullscreen svg {
+  fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #333333;
+    opacity: 0.3;
+  }
+} */
+
+.player-interface__controls-replay path,
+.player-interface__controls-subtitles path,
+.player-interface__controls-fullscreen path {
   fill: #5c6870;
 
   &:hover,
@@ -129,9 +145,9 @@
     margin-right: 41px;
   }
 
-  .player-interface__controls-replay svg,
-  .player-interface__controls-subtitles svg,
-  .player-interface__controls-fullscreen svg {
+  .player-interface__controls-replay path,
+  .player-interface__controls-subtitles path,
+  .player-interface__controls-fullscreen path {
     fill: #ffffff;
 
     &:hover,
