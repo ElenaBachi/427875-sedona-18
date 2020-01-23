@@ -1,3 +1,7 @@
+.review__username p {
+  margin-bottom: 16px;
+}
+
 .review__username ul {
   width: 100%;
 }
@@ -6,17 +10,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 
   &:last-child {
-    margin-bottom: 25px;
+    margin-bottom: 21px;
   }
 }
 
 .review__username input,
 .review__contacts input {
+  margin: 0;
   padding: 16px;
-  padding-left: 21px;
+  padding-left: 20px;
   padding-right: 0;
 
   font-size: 18px;
@@ -27,7 +32,7 @@
 
   background-color: $main-color-back;
 
-  border: none;
+  border: 4px solid #ffffff;
 
   cursor: pointer;
 }
@@ -42,7 +47,7 @@
   &:active,
   &:focus {
     background-color: $main-color;
-    border: 4px solid #e5e5e5;
+    border-color: #e5e5e5;
     outline: none;
 
     box-sizing: border-box;
@@ -53,8 +58,9 @@
   margin-right: 14px;
 }
 
+
 .review__contacts p {
-  margin-top: 20px;
+  margin-bottom: 16px;
 }
 
 .review__contacts ul {
@@ -67,18 +73,18 @@
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 
   &:last-child {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 }
 
 .review__contacts-phone::after {
   content: "";
   position: absolute;
-  top: 50px;
-  right: 39px;
+  top: 54px;
+  right: 43px;
 
   width: 18px;
   height: 18px;
@@ -91,8 +97,8 @@
 .review__contacts-email::after {
   content: "";
   position: absolute;
-  bottom: 23px;
-  right: 41px;
+  bottom: 27px;
+  right: 45px;
 
   width: 16px;
   height: 12px;
@@ -265,6 +271,13 @@
   opacity: 0.3;
 }
 
+.review__checkbox:disabled + label::before,
+.review__radio:disabled + label::before {
+  background-color: #d5d5d5;
+  border-color: #d5d5d5;
+}
+
+
 .review__textarea p {
   margin-bottom: 17px;
 }
@@ -279,6 +292,7 @@
   width: 100%;
   box-sizing: border-box;
 
+  font-family: $font-family;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -291,16 +305,14 @@
 }
 
 .review__submit {
+  width: 87.5%;
+  margin: 0 auto;
+  margin-top: 51px;
   padding-bottom: 40px;
 }
 
 .review__submit button {
-  display: block;
-  margin: 0 auto;
-  margin-top: 51px;
-
-  font-size: 21px;
-  box-sizing: border-box;
+  font-family: $font-family;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -336,24 +348,24 @@
   }
 
   .review__username p {
-    margin-bottom: 58px;
+    margin-bottom: 53px;
   }
 
   .review__contacts {
     position: relative;
 
     width: 100%;
-    margin-top: 70px;
-    margin-bottom: 55px;
+    margin-top: 66px;
+    margin-bottom: 51px;
   }
 
   .review__contacts p {
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .review__contacts li {
-    margin-bottom: 25px;
+    margin-bottom: 16px;
 
     &:last-child {
       margin-bottom: 0;
@@ -361,7 +373,7 @@
 
     &:first-child::after,
     &:last-child::after {
-      right: 19px;
+      right: 25px;
     }
   }
 
@@ -404,7 +416,7 @@
   }
 
   .review__sights p {
-    margin-bottom: 55px;
+    margin-bottom: 58px;
     padding-left: 185px;
     padding-right: 185px;
   }
@@ -414,15 +426,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 460px;
+
     margin: 0 auto;
-    width: 70%;
   }
 
   .review__sights li {
     margin-bottom: 63px;
     padding-left: 80px;
-    box-sizing: border-box;
-    width: 45%;
+    width: 44%;
 
     &:last-child {
       margin-bottom: 50px;
@@ -449,14 +461,22 @@
   }
 
   .review__submit {
+    position: relative;
+    left: -25%;
+
     width: 50%;
+    margin: 0;
+    padding: 0;
     padding-bottom: 61px;
-    margin-right: auto;
   }
 
   .review__submit button {
     margin: 0;
+    padding: 0;
+    padding-left: 64px;
     width: 100%;
+
+    text-align: left;
   }
 
   .review__contacts::before,
@@ -505,16 +525,16 @@
   }
 
   .review__username p {
-    margin-bottom: 55px;
+    margin-bottom: 51px;
   }
 
   .review__contacts {
-    margin-top: 70px;
-    margin-bottom: 50px;
+    margin-top: 66px;
+    margin-bottom: 46px;
   }
 
   .review__contacts p {
-    margin-bottom: 74px;
+    margin-bottom: 70px;
   }
 
   .review__contacts ul {
@@ -531,7 +551,7 @@
     margin-bottom: 0;
 
     &:first-child::after {
-      top: 20px;
+      top: 24px;
       left: 364px;
     }
   }
@@ -575,7 +595,7 @@
   }
 
   .review__sights {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .review__sights p {
@@ -590,11 +610,20 @@
 
   .review__sights li {
     padding-left: 81px;
-    width: 25%;
+    width: auto;
+  }
+
+  .review__sights label {
+    margin: 0;
+    padding: 0;
   }
 
   .review__submit {
     padding-bottom: 66px;
+  }
+
+  .review__submit button {
+    padding-left: 148px;
   }
 
   .review__contacts::before,
